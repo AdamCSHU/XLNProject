@@ -1,0 +1,48 @@
+﻿@page "/FAQ"
+
+
+
+<div class="text-center">
+    <h1 class="display-4">FAQ</h1>
+    <p>Choose a service and catagory to find answers to our most frequently asked questions.</p>
+<button class="accordion">Support</button>
+<div class="panel">
+  <li>Support content.</li>
+</div>
+
+<button class="accordion">Troubleshooting</button>
+<div class="panel">
+  <li>Troubleshooting content.</li>
+</div>
+
+<button class="accordion">Services</button>
+<div class="panel">
+  <li>Services content.</li>
+</div>
+</div>
+
+    <script type="text/javascript">
+
+// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+// for details on configuring this project to bundle and minify static web assets.
+
+// Write your JavaScript code.
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+    });
+}
+</script>
+
+
+@code {
+}
