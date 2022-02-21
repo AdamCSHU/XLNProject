@@ -6141,19 +6141,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\niyaz\\.nuget\\packages\\": {}
+    "C:\\Users\\Chris Ghosal\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\niyaz\\source\\repos\\XLN\\XLN.csproj",
+      "projectUniqueName": "C:\\Users\\Chris Ghosal\\Source\\Repos\\XLNProject2\\XLN\\XLN.csproj",
       "projectName": "XLN",
-      "projectPath": "C:\\Users\\niyaz\\source\\repos\\XLN\\XLN.csproj",
-      "packagesPath": "C:\\Users\\niyaz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\niyaz\\source\\repos\\XLN\\obj\\",
+      "projectPath": "C:\\Users\\Chris Ghosal\\Source\\Repos\\XLNProject2\\XLN\\XLN.csproj",
+      "packagesPath": "C:\\Users\\Chris Ghosal\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Chris Ghosal\\Source\\Repos\\XLNProject2\\XLN\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\niyaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Chris Ghosal\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6210,6 +6210,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.14, 5.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -6218,7 +6224,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
