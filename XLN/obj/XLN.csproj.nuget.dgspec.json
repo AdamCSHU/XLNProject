@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Chris Ghosal\\Source\\Repos\\XLNProject2\\XLN\\XLN.csproj": {}
+    "C:\\Users\\niyaz\\source\\repos\\XLN\\XLN.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Chris Ghosal\\Source\\Repos\\XLNProject2\\XLN\\XLN.csproj": {
+    "C:\\Users\\niyaz\\source\\repos\\XLN\\XLN.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Chris Ghosal\\Source\\Repos\\XLNProject2\\XLN\\XLN.csproj",
+        "projectUniqueName": "C:\\Users\\niyaz\\source\\repos\\XLN\\XLN.csproj",
         "projectName": "XLN",
-        "projectPath": "C:\\Users\\Chris Ghosal\\Source\\Repos\\XLNProject2\\XLN\\XLN.csproj",
-        "packagesPath": "C:\\Users\\Chris Ghosal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Chris Ghosal\\Source\\Repos\\XLNProject2\\XLN\\obj\\",
+        "projectPath": "C:\\Users\\niyaz\\source\\repos\\XLN\\XLN.csproj",
+        "packagesPath": "C:\\Users\\niyaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\niyaz\\source\\repos\\XLN\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Chris Ghosal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\niyaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,6 +59,12 @@
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
               "version": "[5.0.11, )"
+            },
+            "Microsoft.TypeScript.MSBuild": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[4.5.3, )"
             }
           },
           "imports": [
@@ -71,12 +77,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.14, 5.0.14]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

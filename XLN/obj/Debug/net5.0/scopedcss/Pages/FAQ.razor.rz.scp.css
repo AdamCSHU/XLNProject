@@ -1,0 +1,133 @@
+.title[b-ct0bwx1wqn] {
+    text-align: center;
+    color: black;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.yagi-accordion button[b-ct0bwx1wqn] {
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: inherit;
+    color: white;
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    text-transform: none;
+    -webkit-appearance: button;
+    background-color: dodgerblue;
+    background-image: none;
+}
+
+    .yagi-accordion button p[b-ct0bwx1wqn] {
+        margin: 0;
+    }
+
+.yagi-accordion .mx-auto[b-ct0bwx1wqn] {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.yagi-accordion .my-2[b-ct0bwx1wqn] {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.yagi-accordion .mb-2[b-ct0bwx1wqn] {
+    margin-bottom: 0.5rem;
+}
+
+.yagi-accordion .flex[b-ct0bwx1wqn] {
+    display: flex;
+}
+
+.yagi-accordion .table[b-ct0bwx1wqn] {
+    display: table;
+}
+
+.yagi-accordion .hidden[b-ct0bwx1wqn] {
+    display: none;
+}
+
+.yagi-accordion .h-6[b-ct0bwx1wqn] {
+    height: 1.5rem;
+}
+
+.yagi-accordion .max-h-0[b-ct0bwx1wqn] {
+    max-height: 0px;
+}
+
+.yagi-accordion .max-h-tall[b-ct0bwx1wqn] {
+    max-height: 100rem;
+}
+
+@media (min-width: 768px) {
+    .yagi-accordion .max-h-tall[b-ct0bwx1wqn] {
+        max-height: 50rem;
+    }
+}
+
+.yagi-accordion .w-6[b-ct0bwx1wqn] {
+    width: 1.5rem;
+}
+
+.yagi-accordion .w-full[b-ct0bwx1wqn] {
+    width: 100%;
+}
+
+.yagi-accordion .max-w-prose[b-ct0bwx1wqn] {
+    max-width: 80ch;
+}
+
+.yagi-accordion .items-center[b-ct0bwx1wqn] {
+    align-items: center;
+}
+
+.yagi-accordion .justify-between[b-ct0bwx1wqn] {
+    justify-content: space-between;
+}
+
+.yagi-accordion .overflow-hidden[b-ct0bwx1wqn] {
+    overflow: hidden;
+}
+
+.yagi-accordion .rounded[b-ct0bwx1wqn] {
+    border-radius: 0.25rem;
+}
+
+.yagi-accordion .p-3[b-ct0bwx1wqn] {
+    padding: 0.75rem;
+}
+
+.yagi-accordion .px-2[b-ct0bwx1wqn] {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.yagi-accordion .text-left[b-ct0bwx1wqn] {
+    text-align: left;
+}
+
+.yagi-accordion .font-bold[b-ct0bwx1wqn] {
+    font-weight: 700;
+}
+
+.yagi-accordion .whitespace-pre-wrap[b-ct0bwx1wqn] {
+    white-space: pre-wrap;
+}
+
+.yagi-accordion .transition-maxheight[b-ct0bwx1wqn] {
+    transition-property: max-height;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.yagi-accordion .duration-500[b-ct0bwx1wqn] {
+    transition-duration: 500ms;
+}
+
+.yagi-accordion .ease-out[b-ct0bwx1wqn] {
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
