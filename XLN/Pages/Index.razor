@@ -1,5 +1,53 @@
 ﻿@page "/"
 
-<h1>XLN</h1>
 
-<body></body>
+
+<div class="list-con">
+    <ul class="nav flex-column">
+        <li>
+            <h3><strong>Hi {User}</strong></h3>
+            <h5><strong>Customer ID:</strong> {ID}</h5>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span> Profile
+            </NavLink>
+        </li>
+
+        <li class="nav-item ">
+            <NavLink class="nav-link" href="Tickets">
+                <span class="oi oi-plus" aria-hidden="true"></span> Tickets
+            </NavLink>
+            <div>
+                <ul>
+                    <li>Ticket 1</li>
+                    <li>Ticket 1</li>
+                    <li>Ticket 1</li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <NavLink class="nav-link" href="OpenTickets">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Open Tickets
+            </NavLink>
+
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="FAQ">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> FAQ
+            </NavLink>
+        </li>
+    </ul>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

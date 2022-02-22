@@ -1,10 +1,16 @@
 .navbar-toggler {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: none;
+    padding:0px;
+    margin:0px;
+    color:white;
+    border:none;
 }
-
+.navbar-toggler i{
+    font-size:1.5em;
+}
 .top-row {
     height: 3.5rem;
-    background-color: dodgerblue;
+    background-color: #00a4c4;
 }
 
 .navbar-brand {
@@ -40,10 +46,10 @@
         line-height: 3rem;
     }
 
-.nav-item ::deep a.active {
-    background-color: dodgerblue;
-    color: white;
-}
+        .nav-item ::deep a.active {
+            background-color: #00a4c4;
+            color: white;
+        }
 
 .nav-item ::deep a:hover {
     background-color: white;

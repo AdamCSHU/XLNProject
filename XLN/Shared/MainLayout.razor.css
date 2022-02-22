@@ -3,13 +3,17 @@
     display: flex;
     flex-direction: column;
 }
+.bottom-row {
+    background-color: #00a4c4;
+    height: 35px;
+}
 
 .main {
     flex: 1;
 }
 
 .sidebar {
-    background-color:deepskyblue;
+    background-image: linear-gradient(165deg, #1E90FF 0%, rgba(0,0,0,.75) 175% );
 }
 
 .top-row {

@@ -1,14 +1,26 @@
 ﻿@page "/Tickets"
 
 <div class="form">
-    <div class="title">Tickets</div>
-    <div class="subtitle">Create a ticket</div>
-    <div class="input-container ic1">
-        <input id="text" class="input" type="text" placeholder="Notes" />
-    </div>
-    <div class="input-container ic2">
-        <input id="file" class="input" type="file" placeholder="Upload File " />
+  <div class="hidden">Tickets</div>
+  <div class="title">Create a ticket</div>
+
+
+<form role="form" id="contactForm" class="contact-form" data-toggle="validator" novalidate="true">
+          
+	<div class="form-group">
+		<input name="title" id="title" type="text" class="form-control" placeholder="Sumary of Fault..">
+	</div>
+
+    <div class="form-group-2 mb-4">
+        <textarea name="desc" id="desc" class="form-control" rows="4" placeholder="Provide a description of the fault.."></textarea>
     </div>
 
-    <button type="text" class="submit">submit</button>
+    <input id="file" class="upload" type="file" placeholder="Upload File " />
+
+    <button class="btn btn-main" name="submit" type="submit" style="pointer-events: all; cursor: pointer;">Submit Titcket</button>
+   
+    <div style="margin-top:30px;" id="msg" class="h3 text-center hidden"></div> 
+    <div style="margin-top:30px;" class="clearfix"></div> 
+</form>
+
 </div>
