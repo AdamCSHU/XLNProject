@@ -214,3 +214,5 @@ C:\Users\Eva\Desktop\XLNProject-main (3)\XLNProject-main\XLN\obj\Debug\net5.0\re
 C:\Users\Eva\Desktop\XLNProject-main (3)\XLNProject-main\XLN\obj\Debug\net5.0\XLN.pdb
 C:\Users\Eva\Desktop\XLNProject-main (3)\XLNProject-main\XLN\obj\Debug\net5.0\XLN.genruntimeconfig.cache
 C:\Users\Eva\Desktop\XLNProject-main (3)\XLNProject-main\XLN\obj\Debug\net5.0\ref\XLN.dll
+C:\Users\Eva\Desktop\XLNProject-main (3)\XLNProject-main\XLN\obj\Debug\net5.0\RazorDeclaration\Pages\ClosedTickets.razor.g.cs
+C:\Users\Eva\Desktop\XLNProject-main (3)\XLNProject-main\XLN\obj\Debug\net5.0\Razor\Pages\ClosedTickets.razor.g.cs
