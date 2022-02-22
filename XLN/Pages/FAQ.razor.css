@@ -21,9 +21,10 @@
     background-image: none;
 }
 
-    .yagi-accordion button p {
+.yagi-accordion button p {
         margin: 0;
-    }
+
+}
 
 .yagi-accordion .mx-auto {
     margin-left: auto;
