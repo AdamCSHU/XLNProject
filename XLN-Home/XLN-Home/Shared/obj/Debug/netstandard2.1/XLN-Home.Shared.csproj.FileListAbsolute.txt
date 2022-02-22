@@ -1,0 +1,10 @@
+C:\Users\Aiden\source\repos\XLN-Home\XLN-Home\Shared\obj\Debug\netstandard2.1\XLN-Home.Shared.csproj.AssemblyReference.cache
+C:\Users\Aiden\source\repos\XLN-Home\XLN-Home\Shared\obj\Debug\netstandard2.1\XLN-Home.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aiden\source\repos\XLN-Home\XLN-Home\Shared\obj\Debug\netstandard2.1\XLN-Home.Shared.AssemblyInfoInputs.cache
+C:\Users\Aiden\source\repos\XLN-Home\XLN-Home\Shared\obj\Debug\netstandard2.1\XLN-Home.Shared.AssemblyInfo.cs
+C:\Users\Aiden\source\repos\XLN-Home\XLN-Home\Shared\obj\Debug\netstandard2.1\XLN-Home.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Aiden\source\repos\XLN-Home\XLN-Home\Shared\bin\Debug\netstandard2.1\XLN-Home.Shared.deps.json
+C:\Users\Aiden\source\repos\XLN-Home\XLN-Home\Shared\bin\Debug\netstandard2.1\XLN-Home.Shared.dll
+C:\Users\Aiden\source\repos\XLN-Home\XLN-Home\Shared\bin\Debug\netstandard2.1\XLN-Home.Shared.pdb
+C:\Users\Aiden\source\repos\XLN-Home\XLN-Home\Shared\obj\Debug\netstandard2.1\XLN-Home.Shared.dll
+C:\Users\Aiden\source\repos\XLN-Home\XLN-Home\Shared\obj\Debug\netstandard2.1\XLN-Home.Shared.pdb

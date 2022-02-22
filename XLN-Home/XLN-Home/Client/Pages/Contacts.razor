@@ -1,0 +1,30 @@
+@page "/contacts"
+@using XLN_Home.Shared
+@inject HttpClient Http
+@inject NavigationManager NavigationManager
+
+<div class="col-12">
+    @foreach(var contact in UserList)
+    {
+        <a href="/chat/@contact.ContactID" class="list-group-item list-group-item-action flex-column align-items-start">@contact.FirstName <span></span> @contact.LastName </a>
+    }
+</div>
+
+@code {
+    private List<User> UserList { get; set; } = new List<User>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        UserList.Add(new User(1, "Jully", "Ces"));
+        UserList.Add(new User(2, "Gary", "Thom"));
+        UserList.Add(new User(3, "Fred", " Dread"));
+        UserList.Add(new User(4, "Greg", "Heag"));
+        UserList.Add(new User(5, "Timmy", "Nook"));
+    }
+
+    private void NavigateToChat()
+    {
+        NavigationManager.NavigateTo("/chat/");
+    }
+
+}
