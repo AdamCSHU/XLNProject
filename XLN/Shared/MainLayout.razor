@@ -1,20 +1,27 @@
 ﻿@inherits LayoutComponentBase
 
+
 <div class="page">
-    <div class="sidebar">
+    <div class="sidebar" id="header">
         <NavMenu />
     </div>
 
-    <div class="main pb-3">
+    <div class="main">
         
         <div class="top-row px-4 auth" style="text-align:center;">
             
             <p>Advertisement</p>
+            
         </div>
 
         <div class="content">
             @Body
         </div>
     </div>
-    <div class="fixed-bottom pl-4 bottom-row"></div>
+    <div class="fixed-bottom pl-4 bottom-row" id="bottom"></div>
 </div>
+
+
+@code{
+    
+}

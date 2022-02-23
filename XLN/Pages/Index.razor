@@ -18,12 +18,8 @@
             <NavLink class="nav-link" href="Tickets">
                 <span class="oi oi-plus" aria-hidden="true"></span> Tickets
             </NavLink>
-            <div>
-                <ul>
-                    <li>Ticket 1</li>
-                    <li>Ticket 1</li>
-                    <li>Ticket 1</li>
-                </ul>
+            <div class="tickets-page">
+                <iframe src="/tickets" title="ticket-frame" @onload="IFrameLoaded"></iframe>
             </div>
         </li>
 
@@ -34,20 +30,19 @@
 
         </li>
         <li class="nav-item">
-            <NavLink class="nav-link" href="FAQ">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> FAQ
+            <NavLink class="nav-link">
+                <span class="oi oi-list-rich" aria-hidden="true"></span> Help Me
             </NavLink>
+            <span class="index-links"><a href="/faq">FAQ</a></span>
+            <span class="index-links"><a href="/faq">Troubleshooting</a></span>
+            <span class="index-links"><a href="/">Support</a></span>
         </li>
     </ul>
 </div>
 
-@code {
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+@code{
+    private void IFrameLoaded(ProgressEventArgs e)
     {
-        collapseNavMenu = !collapseNavMenu;
+        Console.WriteLine("IFrame loaded");
     }
 }
