@@ -122,6 +122,6 @@
     width: 100%;
 }
 
-    .submit:active {
-        background-color: #06b;
-    }
+.submit:active {
+    background-color: #06b;
+}

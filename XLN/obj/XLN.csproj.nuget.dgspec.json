@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eva\\Desktop\\XLNProject-main (3)\\XLNProject-main\\XLN\\XLN.csproj": {}
+    "C:\\Users\\niyaz\\source\\repos\\XLN\\XLN.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eva\\Desktop\\XLNProject-main (3)\\XLNProject-main\\XLN\\XLN.csproj": {
+    "C:\\Users\\niyaz\\source\\repos\\XLN\\XLN.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eva\\Desktop\\XLNProject-main (3)\\XLNProject-main\\XLN\\XLN.csproj",
+        "projectUniqueName": "C:\\Users\\niyaz\\source\\repos\\XLN\\XLN.csproj",
         "projectName": "XLN",
-        "projectPath": "C:\\Users\\Eva\\Desktop\\XLNProject-main (3)\\XLNProject-main\\XLN\\XLN.csproj",
-        "packagesPath": "C:\\Users\\Eva\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eva\\Desktop\\XLNProject-main (3)\\XLNProject-main\\XLN\\obj\\",
+        "projectPath": "C:\\Users\\niyaz\\source\\repos\\XLN\\XLN.csproj",
+        "packagesPath": "C:\\Users\\niyaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\niyaz\\source\\repos\\XLN\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Eva\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\niyaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

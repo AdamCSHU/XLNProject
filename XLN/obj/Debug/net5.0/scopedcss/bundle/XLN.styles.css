@@ -7,6 +7,7 @@
     font-weight: 600;
     margin-top: 30px;
 }
+
 .yagi-accordion button[b-ct0bwx1wqn] {
     border: none;
     cursor: pointer;
@@ -22,9 +23,9 @@
     background-image: none;
 }
 
-    .yagi-accordion button p[b-ct0bwx1wqn] {
+.yagi-accordion button p[b-ct0bwx1wqn] {
         margin: 0;
-    }
+}
 
 .yagi-accordion .mx-auto[b-ct0bwx1wqn] {
     margin-left: auto;
@@ -132,7 +133,6 @@
 .yagi-accordion .ease-out[b-ct0bwx1wqn] {
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
-/* _content/XLN/Pages/OpenTickets.razor.rz.scp.css */
 /* _content/XLN/Pages/Tickets.razor.rz.scp.css */
 body[b-k6734izi1a] {
     align-items: center;
@@ -258,9 +258,9 @@ body[b-k6734izi1a] {
     width: 100%;
 }
 
-    .submit:active[b-k6734izi1a] {
-        background-color: #06b;
-    }
+.submit:active[b-k6734izi1a] {
+    background-color: #06b;
+}
 /* _content/XLN/Shared/MainLayout.razor.rz.scp.css */
 .page[b-1i0n3smah1] {
     position: relative;
