@@ -1,0 +1,107 @@
+﻿@page "/Ticket"
+<body>
+    <div class="top-bar">
+        <h1>
+            Ticket
+        </h1>
+    </div>
+    <div class="main">
+        <div class="header">
+            <h4 class="title">
+                Thread 1
+            </h4>
+            <div class="bottom">
+                <p class="timestamp">
+                    10/10/2020
+                </p>
+                <p class="comment-count">
+                    4 comments
+                </p>
+            </div>
+        </div>
+        <textarea></textarea>
+        <button>add comment</button>
+        <div class="comments">
+            <div class="comment">
+                <div class"top-comment">
+                    <p class="user">
+                        John
+                    </p>
+                    <p class="timestamp">
+                        10/10/2020
+                    </p>
+                </div>
+                <div class="comment-content">
+                    Comment text here
+                </div>
+                <div class"top-comment">
+                    <p class="user">
+                        John
+                    </p>
+                    <p class="timestamp">
+                        10/10/2020
+                    </p>
+                </div>
+                <div class="comment-content">
+                    Comment text here
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        body {
+            margin: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        h1, h4, ol {
+            margin: 0;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+        textarea {
+            width: 80%;
+            height: 80px;
+        }
+
+        button{
+            display: block;
+            margin: 10px 0;
+        }
+
+        .top-bar {
+            background-color: #00a4c4;
+            padding: 0 40px;
+        }
+
+        .main {
+            background-color: #F6F6EF;
+            padding: 10px 40px;
+        }
+        .comments {
+            margin: 40px 0;
+        }
+        .bottom .top-comment {
+            display: flex;
+            color: grey;
+            font-size: 12px;
+        }
+
+        .row {
+            padding;
+            5px 0;
+        }
+
+        .timestamp {
+            padding-right: 10px;
+        }
+
+    </style>
+</body>
+
