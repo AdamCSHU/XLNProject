@@ -69,7 +69,7 @@
       "url": "manifest.json"
     },
     {
-      "hash": "sha256-5DB0EySvx8vngNPBRMQLt7kLe\/lPLhDBHiznyLtOZNs=",
+      "hash": "sha256-iUPQxdOBu3REi94up36I8zZcBnww1Aioa0wXszo1490=",
       "url": "XLN-Hosted.Client.styles.css"
     },
     {
@@ -857,19 +857,19 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-PpTnoWYIZMpK5\/3HHDTKHYoXlL3WubI7yyXbS0kV6ag=",
+      "hash": "sha256-6yPvcl+a0I2rJ2swDpcL4YlZ+zEmOvlQUEivEjKXcMc=",
       "url": "_framework\/XLN-Hosted.Shared.dll"
     },
     {
-      "hash": "sha256-w2VaK9Yq\/bSLtLu2VZIdxJMvK0eswIo+AJ8a+384Q7M=",
+      "hash": "sha256-bhc9Qefwl+7KaXQnuHQTYza+6MjnA\/zm+0pLJqmA+qw=",
       "url": "_framework\/XLN-Hosted.Shared.pdb"
     },
     {
-      "hash": "sha256-nPXvVhYoCwWgnMxsoRVPT8O9p1MQFJUGmZQIFg7CsxA=",
+      "hash": "sha256-amMt5NcRu8qVZv3j8rqglkBNEpjZgyJ7ysZNnN8b0es=",
       "url": "_framework\/XLN-Hosted.Client.dll"
     },
     {
-      "hash": "sha256-b3WMBjG5GrcLPP4kLwwcl9Mn\/Fs9S+D7IUvWBnvn\/uo=",
+      "hash": "sha256-P9bMycXgO9VwH27B1UunXo4AHfEXS\/A3wh4CtlsH+bM=",
       "url": "_framework\/XLN-Hosted.Client.pdb"
     },
     {
@@ -877,9 +877,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-qEBuvhZF9nsDrTTlLSbnX+\/3GxAaU3QTAppltxoNPPA=",
+      "hash": "sha256-wYnHnzgo7jtViNnsTQDkSc5B+aVyCBcQvN64+iL6j00=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "pGZXoGJg"
+  "version": "5nQ8\/aLY"
 };
