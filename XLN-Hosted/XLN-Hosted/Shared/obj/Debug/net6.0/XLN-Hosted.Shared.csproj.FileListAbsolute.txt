@@ -1,0 +1,12 @@
+C:\Users\labstudent\source\repos\XLN-Hosted\XLN-Hosted\Shared\bin\Debug\net6.0\XLN-Hosted.Shared.deps.json
+C:\Users\labstudent\source\repos\XLN-Hosted\XLN-Hosted\Shared\bin\Debug\net6.0\XLN-Hosted.Shared.dll
+C:\Users\labstudent\source\repos\XLN-Hosted\XLN-Hosted\Shared\bin\Debug\net6.0\ref\XLN-Hosted.Shared.dll
+C:\Users\labstudent\source\repos\XLN-Hosted\XLN-Hosted\Shared\bin\Debug\net6.0\XLN-Hosted.Shared.pdb
+C:\Users\labstudent\source\repos\XLN-Hosted\XLN-Hosted\Shared\obj\Debug\net6.0\XLN-Hosted.Shared.csproj.AssemblyReference.cache
+C:\Users\labstudent\source\repos\XLN-Hosted\XLN-Hosted\Shared\obj\Debug\net6.0\XLN-Hosted.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\labstudent\source\repos\XLN-Hosted\XLN-Hosted\Shared\obj\Debug\net6.0\XLN-Hosted.Shared.AssemblyInfoInputs.cache
+C:\Users\labstudent\source\repos\XLN-Hosted\XLN-Hosted\Shared\obj\Debug\net6.0\XLN-Hosted.Shared.AssemblyInfo.cs
+C:\Users\labstudent\source\repos\XLN-Hosted\XLN-Hosted\Shared\obj\Debug\net6.0\XLN-Hosted.Shared.csproj.CoreCompileInputs.cache
+C:\Users\labstudent\source\repos\XLN-Hosted\XLN-Hosted\Shared\obj\Debug\net6.0\XLN-Hosted.Shared.dll
+C:\Users\labstudent\source\repos\XLN-Hosted\XLN-Hosted\Shared\obj\Debug\net6.0\ref\XLN-Hosted.Shared.dll
+C:\Users\labstudent\source\repos\XLN-Hosted\XLN-Hosted\Shared\obj\Debug\net6.0\XLN-Hosted.Shared.pdb

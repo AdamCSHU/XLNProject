@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b95c38c2-ca98-4138-bf10-5c9365369128": {
+      "ProjectGuid": "b95c38c2-ca98-4138-bf10-5c9365369128",
+      "DisplayName": "XLN-Hosted.Server",
+      "ColorIndex": 0
+    },
+    "06919678-33e3-402c-b360-144c18439fc8": {
+      "ProjectGuid": "06919678-33e3-402c-b360-144c18439fc8",
+      "DisplayName": "XLN-Hosted.Client",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

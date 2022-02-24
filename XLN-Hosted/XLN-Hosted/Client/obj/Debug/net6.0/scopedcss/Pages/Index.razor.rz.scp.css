@@ -1,0 +1,48 @@
+.oi[b-p3aybwpbwz] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.list-con[b-p3aybwpbwz] {
+    background-image: linear-gradient(165deg, #1E90FF 0%, #0c7ae8 175% );
+}
+
+.tickets-page[b-p3aybwpbwz] {
+    height: 250px;
+}
+
+    .tickets-page iframe[b-p3aybwpbwz] {
+        height: 100%;
+        width: 100%;
+        border: 0px;
+    }
+
+.nav-item[b-p3aybwpbwz] {
+    font-size: 0.9rem;
+}
+
+    .nav-item[b-p3aybwpbwz]  a {
+        color: black;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+        background-color: rgba(255,255,255,0.5);
+    }
+
+    .nav-item .index-links a[b-p3aybwpbwz] {
+        background-color: rgba(0,0,0,0);
+    }
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-p3aybwpbwz] {
+        display: none;
+    }
+
+    .collapse[b-p3aybwpbwz] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}
