@@ -6265,11 +6265,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\niyaz\\source\\repos\\XLN\\XLN.csproj",
       "projectName": "XLN",
       "projectPath": "C:\\Users\\niyaz\\source\\repos\\XLN\\XLN.csproj",
       "packagesPath": "C:\\Users\\niyaz\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\niyaz\\source\\repos\\XLN\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\niyaz\\Documents\\GitHub\\XLN\\XLN.csproj",
+      "projectName": "XLN",
+      "projectPath": "C:\\Users\\niyaz\\Documents\\GitHub\\XLN\\XLN.csproj",
+      "packagesPath": "C:\\Users\\niyaz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\niyaz\\Documents\\GitHub\\XLN\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\niyaz\\AppData\\Roaming\\NuGet\\NuGet.Config",

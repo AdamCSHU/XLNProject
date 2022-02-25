@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "ZGRV23zaGNFiEKR6tAW36bw5if/uFPa8BjO7ufStBkPu7sEH1Sl9/rVv/x+86dJ1OWvxJWHy507ifnVn/3d0Tw==",
   "success": true,
   "projectFilePath": "C:\\Users\\niyaz\\source\\repos\\XLN\\XLN.csproj",
+=======
+  "dgSpecHash": "3wO3Rdl0d7Hm1aLss6ZOjTlcPr3EZJ4/QUHesxXkTS7LPEB+2RMgscO6E1lVNLA2Kq20UVqYxzKEobzn8AjUvg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\niyaz\\Documents\\GitHub\\XLN\\XLN.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [
     "C:\\Users\\niyaz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\niyaz\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.11\\microsoft.aspnetcore.cryptography.internal.5.0.11.nupkg.sha512",
