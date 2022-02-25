@@ -1,0 +1,17 @@
+.radio-holder[b-4borvvmvci]{
+    display: flex;
+    justify-content: center;
+}
+
+.btn[b-4borvvmvci] {
+    width: 100%;
+    border-radius: 0px;
+    border-left: 2.5px solid lightgrey !important;
+    border-right: 2.5px solid lightgrey !important;
+}
+.radio-holder .btn:first-of-type[b-4borvvmvci]{
+    border-left:none!important;
+}
+.radio-holder .btn:last-of-type[b-4borvvmvci]{
+    border-right:none!important;
+}

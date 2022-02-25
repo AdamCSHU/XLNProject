@@ -1,0 +1,17 @@
+﻿.radio-holder{
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 100%;
+    border-radius: 0px;
+    border-left: 2.5px solid lightgrey !important;
+    border-right: 2.5px solid lightgrey !important;
+}
+.radio-holder .btn:first-of-type{
+    border-left:none!important;
+}
+.radio-holder .btn:last-of-type{
+    border-right:none!important;
+}
