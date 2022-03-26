@@ -1,0 +1,28 @@
+﻿@page "/user"
+@page "/user/{id:int}"
+@inject IUserService UserService
+
+
+
+<h1>kugkjhkjh @Id  </h1>
+
+
+
+@code {
+
+    [Parameter]
+    public int? Id { get; set; }
+    
+    User user = new User { };
+
+
+    protected override async Task OnParametersSetAsync()
+    {
+        user = await UserService.GetSingleUser((int)Id);
+    }
+
+        
+    
+
+    
+}
