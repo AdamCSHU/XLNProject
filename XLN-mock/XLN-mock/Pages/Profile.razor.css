@@ -1,0 +1,10 @@
+﻿ul li{
+    padding-bottom: 5px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+.cli-list li {
+    display:flex;
+}

@@ -1,0 +1,184 @@
+﻿@page "/form"
+@using Microsoft.AspNetCore.Components.Rendering
+@inject NavigationManager NavigationManager;
+<PageTitle>@title</PageTitle>
+
+<div class="text-center bg-main pt-4 pb-2 mb-5 border-bottom border-5 border-dark">
+    <h2>Raising a fault against: @cli</h2>
+</div>
+
+<div class="form-wrap">
+    <form>
+        <div class="form-group px-4">
+            <h3 class="text-center">Contact Info</h3>
+            <label for="companyName">Company Name</label>
+            <input id="companyName" type="text" class="form-control" readonly value="@companyName">
+            <label for="name">Contact Name</label>
+            <input id="name" type="text" class="form-control" readonly value="@contactName">
+            <label for="email">Contact Email</label>
+            <input id="email" type="text" class="form-control" readonly value="@contactEmail">
+
+            <label for="phone">Contact Phone</label>
+            <input id="phone" type="tel" class="form-control" pattern="[0-9]{10}" placeholder="Load ID phone" value="@contactNumber">
+            <label for="mobile">Mobile Phone</label>
+            <input id="mobile" type="tel" class="form-control" placeholder="07XXX XXXXX">
+
+            <label for="engineerNotes">Engineer Notes</label>
+            <textarea class="form-control" id="engineerNotes" rows="3" placeholder="How can the engieer reach you, enter your building, and a number to contact..."></textarea>
+        </div>
+        <hr class="border border-2 border-dark" />
+        <div class="px-4 py-2 form-group incidentReport ">
+            <h3 class="text-center">Incident Report</h3>
+
+            
+            <div class="faultAffecting mb-2">
+                What is the fault affecting? If both select CLI.<br />
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="faultAffecting" id="faultAffecting1" value="option1">
+                    <label class="form-check-label" for="faultAffecting1">CLI</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="faultAffecting" id="faultAffecting2" value="option2">
+                    <label class="form-check-label" for="faultAffecting2">Broadband</label>
+                </div>
+                <br />
+            </div>
+            
+            @{ListDropDown(__builder);}
+
+            <div class="form-group">
+                <label for="indicentDesc">Incident Details</label>
+                <input type="text" class="form-control" id="indicentDesc">
+            </div>
+
+            <div class="form-check mt-3 mb-3">
+                <input type="checkbox" class="form-check-input" id="intermittent">
+                <label class="intermittent" for="intermittent">Intermittent?</label>
+            </div>
+            <div class="form-group d-flex flex-row gap-4 mb-3">
+                <button class="btn btn-primary" type="button" disabled=@testRan @onclick="MockDiagnostics">Run Diagnostics</button>
+                @{MockResults(__builder);}
+            </div>
+            <div class="form-group mb-3">
+                <button class="btn btn-warning" type="button" @onclick="collapse">Warning</button>
+                <div style="display:@warningHide" class="mb-0">
+                    <p class="border border-warning border-3 rounded-3 p-2 bg-darkgrey">
+                        <strong><a class="ml-5" href="https://btbusiness.custhelp.com/app/answers/detail/a_id/45454/~/i-have-a-fault-on-my-phone-line.-how-do-i-test-my-equipment-or-wiring%3F">Have you run your basic tests?</a></strong><br/>
+                        It should be advised that customers should follow these checks prior to proceeding with the fault submission to confirm that they have checked their equipment and that if the fault is found to be on their own equipment that they may be subject to time related charges. Any engineer charges may be passed on if the fault is proven on customer's apparatus.
+                    </p>
+                </div>
+
+                <br />
+                
+                <div class="form-check mt-2 mb-3">
+                    <input type="checkbox" class="form-check-input" id="warninTick">
+                    <label class="intermittent" for="warninTick">Have you read and understoon the warning?</label>
+                </div>
+            </div>
+        </div>
+        <div class="bg-light d-grid gap-2 px-3 py-4">
+          <div class="btn btn-primary">.</div>
+        </div>
+        <div class="bg-light footer fixed-bottom d-grid gap-2 px-3 py-4">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+
+@code {
+    private string title = "Report a Fault";
+    protected override async Task OnInitializedAsync()
+    {
+        loadFromDB();
+    }
+    string companyName;
+    string contactName;
+    string contactEmail;
+    string contactNumber;
+    private void loadFromDB()
+    {
+        companyName = "Your Company";
+        contactName = "Your Name";
+        contactEmail = "email@gmail.com";
+        contactNumber = "0734534545";
+    }
+
+    string warningHide = "none";
+    bool displayFactor = false;
+    private void collapse()
+    {
+        displayFactor = !displayFactor;
+        warningHide = displayFactor ? "unset" : "none";
+    }
+
+    bool testRan = false;
+    string result="";
+    List<string> diagnosticOut = new List<string> { "CA – Customer apparatus", "LF – Line fault", "EX – Exchange fault", "DP – Distribution point", "OK – Line tests ok" };
+    private void MockDiagnostics()
+    {
+        testRan = true;
+        Random rnd = new Random();
+        result = diagnosticOut[rnd.Next(5)];
+    }
+    void MockResults(RenderTreeBuilder __builder)
+    {
+        if (!result.Equals(""))
+        {
+            <div class="pl-3">
+            <label for="diagnosticsResults">Diagnostics Results:</label>
+            <input type="text" readonly class="form-control-plaintext py-0" id="diagnosticsResults" value="@result">
+            </div>
+        }
+    } 
+
+    string isCLI { get; set; }
+    string cli { get; set; }
+    protected override void OnInitialized()
+    {
+        GetisCLI();
+        GetCLI();
+    }
+    public void GetisCLI()
+    {
+        var uri = new Uri(NavigationManager.Uri);
+        isCLI = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query).TryGetValue("iscli", out var type) ? type.First() : "";
+    }
+    public void GetCLI()
+    {
+        var uri = new Uri(NavigationManager.Uri);
+        cli = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query).TryGetValue("cli", out var type) ? type.First() : "";
+    }
+    /*---LIST DROP DOWN---*/
+
+    void ListDropDown(RenderTreeBuilder __builder)
+    {
+        if (isCLI.Equals("true"))
+        {
+            <label for="incidentType">Incident Type</label>
+            <select class="form-control" id="incidentType">
+                <option>Bell not ringing</option>
+                <option>Continuous dial tone</option>
+                <option>Crossed lines</option>
+                <option>Cuts off</option>
+                <option>No dial tone</option>
+                <option>Noisy line</option>
+                <option>Damage</option>
+            </select>
+        }
+        else
+        {
+            <label for="incidentType">Incident Type</label>
+            <select class="form-control" id="incidentType">
+                <option>Intermittent connection</option>
+                <option>Early life failure</option>
+                <option>Broadband fault</option>
+                <option>Landline fault</option>
+                <option>Firmware upgraded</option>
+                <option>No web pages loading</option>
+            </select>
+        }
+    }
+
+}

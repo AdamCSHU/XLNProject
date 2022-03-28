@@ -1,0 +1,44 @@
+﻿@page "/page3"
+@inject NavigationManager NavigationManager;
+<PageTitle>Profile</PageTitle>
+
+<div class="">
+    <div class="p-3 mt-2">
+        <h1 class="text-center mb-2">Welcome {name}</h1>
+        <h5>Your Contact Info</h5>
+        <ul>
+            <li id="companyName">Company Name: </li>
+            <li id="name">Contact Name: </li>
+            <li id="email">Contact Email: </li>
+            <li id="phone">Contact Phone: </li>
+        </ul>
+    </div>
+    <div>
+        
+        <h2 class="ps-3">CLI's Held with XLN</h2>
+        <div class="d-flex flex-column">
+            <div class="border d-flex flex-row bg-light">
+                <div class="p-1 me-auto">This is your CLI info</div>
+                <div class="flex-shrink-1"><a href="/troubleshoot" class="m-2 btn bg-danger">Troubleshoot</a></div>
+                <div class="flex-shrink-1"><a href="/report" class="m-2 btn bg-main">Report Fault</a></div>
+            </div>
+
+            <div class="border d-flex flex-row bg-light">
+                <div class="p-1 me-auto">This is your CLI info</div>
+                <div class="flex-shrink-1"><a href="/troubleshoot" class="m-2 btn bg-danger">Troubleshoot</a></div>
+                <div class="flex-shrink-1"><button @onclick="@(e=>report("true"))" class="m-2 btn bg-main">Report Fault</button></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+    private void report(string n)
+    {
+        NavigationManager.NavigateTo($"report/{n}");
+        
+    }
+}

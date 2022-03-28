@@ -1,10 +1,59 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&display=swap');
 
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    height:100vh;
-    
+    font-family: 'Fira Sans', sans-serif;
+    /*'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+    height: 100vh;
+    overflow-x: hidden;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
+    body::-webkit-scrollbar {
+        display: none;
+    }
+/* MAIN ADDED CSS */
+.main-bg {
+    background-color: #00a4c4 !important;
+}
+.bg-main {
+    background-color: #00a4c4 !important;
+}
+
+/* spinning wheel*/
+.loader {
+    margin: auto;
+    margin-top: 50%;
+    border: 12px solid lightgrey;
+    border-radius: 50%;
+    border-top: 12px solid #3498db;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+}
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* END */
 
 h1:focus {
     outline: none;

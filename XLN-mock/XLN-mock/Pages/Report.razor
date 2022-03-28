@@ -1,9 +1,27 @@
-﻿@page "/report"
+﻿
+@page "/report"
+@inject NavigationManager NavigationManager;
 
-<PageTitle>Fault Reporting</PageTitle>
 
-<h1 style="text-align:center;">Report a Fault</h1>
+<PageTitle>@title</PageTitle>
+<span class="centered-holder">
+    <div class="main border border-warning border-4 rounded-3">
+        <div class="heading bg-danger text-center text-white">
+            <h1>Warning!</h1>
+            <h3>You are about to report a fault!</h3>
+        </div>
+        <div>
+            <p>Before you report a fault, ensure that you have checked your equipment thoroughly. Engineering visits that prove faults to be with customer equipment or damage caused to the network may result in a charge.</p>
+            <div class="text-center">
+                <button class="mx-3 btn bg-success" @onclick="OnClick">Continue</button>
+                <!--a href="/form/{CLI}" onclick="" class="mx-3 btn bg-success">Continue</a-->
+                <a href="/profile" class="mx-3 btn bg-danger">Go Back</a>
+            </div>
+        </div>
+    </div>
+</span>
 
+<!--
 <div class="radio-holder">
     
     <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
@@ -24,12 +42,61 @@
     <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off">
     <label class="btn btn-secondary m-auto" for="option6">Radio</label>
 </div>
+-->
+<!--
+<span class="centered-holder">
+    <div style="text-align:center" class="centered-content">
+        <div class="main-bg header">
+            <h1 style="text-align:center;">Report a Fault</h1>
+        
+        </div>
+        <div style="padding: 00px 40px;">
+        <p class="mt-5 mb-5" style="text-align:left;">Before you report a fault, ensure that you have checked your equipment thoroughly. Engineering visits that prove faults to be with customer equipment or damage caused to the network may result in a charge.</p>
+    
+        <div class="">
+            <h2>Incident or Product</h2>
+            <a href="">
+                <div class="faultservice">
+                Phone Line (CLI)
+                </div>
+            </a>
+            <a href="">
+                <div class="faultservice">
+                Broadband
+                </div>
+            </a>
+      
 
-
+        </div>
+        </div>
+    </div>
+</span>
+-->
 
 
 @code {
-    /*
- Ability for the user to select which service is affected by a fault (Phone Line/Broadband)
-     */
+    private string title = "Warning";
+    string isCLI { get; set; }
+    string cli { get; set; }
+    protected override void OnInitialized()
+    {
+        GetisCLI();
+        GetCLI();
+    }
+    public void GetisCLI()
+    {
+        var uri = new Uri(NavigationManager.Uri);
+        isCLI = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query).TryGetValue("iscli", out var type) ? type.First() : "";
+    }
+    public void GetCLI()
+    {
+        var uri = new Uri(NavigationManager.Uri);
+        cli = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query).TryGetValue("cli", out var type) ? type.First() : "";
+    }
+    
+    private void OnClick()
+    {
+        NavigationManager.NavigateTo($"form/?cli={cli}&iscli={isCLI}");
+    }
+
 }
