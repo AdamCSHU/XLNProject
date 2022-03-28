@@ -10,12 +10,11 @@ main {
 }
 
 .sidebar {
-    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+    background-color: white;
 }
 
 .top-row {
-    background-color: #f7f7f7;
-    border-bottom: 1px solid #d6d5d5;
+    background-color: white;
     justify-content: flex-end;
     height: 3.5rem;
     display: flex;
@@ -28,9 +27,10 @@ main {
         text-decoration: none;
     }
 
-    .top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
-        text-decoration: underline;
-    }
+        .top-row ::deep a:hover, .top-row ::deep .btn-link:hover {
+            text-decoration: underline;
+            background-color: white;
+        }
 
     .top-row ::deep a:first-child {
         overflow: hidden;
@@ -57,7 +57,7 @@ main {
     }
 
     .sidebar {
-        width: 250px;
+        width: 0px;
         height: 100vh;
         position: sticky;
         top: 0;

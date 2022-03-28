@@ -1,6 +1,10 @@
 ﻿ul li{
     padding-bottom: 5px;
 }
+.user_detail {
+    padding-right: 50px;
+
+}
 ul {
     list-style: none;
     padding: 0;

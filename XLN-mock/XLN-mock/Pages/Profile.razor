@@ -4,28 +4,15 @@
 <PageTitle>@title</PageTitle>
 
 <div class="">
-    <div class="header text-center bg-main">
-        <div class="bg-light p-2">
-            Need to call Customer Service? <a href=tel class="text-decoration-none">0344 880 7777</a>
-        </div>
+   
         <div class="pt-3 pb-3">
-            <div>
-                <img height="25px" src="../images/user_icon.png" /> @contactName (@contactNumber) - <strong><a href="/logout" class="text-decoration-none link-dark">Logout</a></strong>
+             <div class="header text-center bg-main">
+            <div class="bg-light p-2">
+                Need to call Customer Service? <a href=tel class="text-decoration-none">0344 880 7777</a>
             </div>
             <h1 class="mt-2 text-white">@title</h1>
         </div>
-    </div>
-    <div class="container px-4 pb-4 mb-3 bg-main">
-        <div class="row">
-            <div class="col">Company Name: @companyName</div>
-            <div class="col">Contact Name: @contactName</div>
-        </div>
-        <div class="row">
-            <div class="col">Contact Phone: @contactNumber</div>
-            <div class="col">Contact Email: @contactEmail</div>
-        </div>
-    </div>
-    
+    </div>    
     <div>
         
         <h2 class="ps-3">CLI's Held with XLN</h2>
@@ -63,7 +50,7 @@
     List<string[]> clis = new List<string[]>
     {
         new string[] {"Your first CLI","true"},
-        new string[] {"Your first Boradband","false"},
+        new string[] {"Your first Broadband","false"},
         new string[] {"Your second CLI","true"}
     };
 
