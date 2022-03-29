@@ -2,10 +2,13 @@
 @inject IUserService UserService
 @inject NavigationManager NavigationManager
 
-
-   <button type="submit" @onclick="Logout"> Logout</button>
+<div style="padding-right: 100px" >
+<button type="submit" @onclick="Logout"  > Logout</button>
+</div>
+  
 
 <h3> Your user ID/Username:  @Id  </h3>
+<h2 > Your Business Name: @myuser.CompanyName </h2>
 <p>  Your Name: @myuser.Name </p>
 <p>  Your Address: @myuser.Address </p>
 <p>  Your Email: @myuser.Email </p>
@@ -27,9 +30,7 @@
         myuser = await UserService.GetSingleUser((int)Id);
     }
 
-        
-    
-    
+   
     private void Logout()
     {
      
