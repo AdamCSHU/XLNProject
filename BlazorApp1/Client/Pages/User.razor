@@ -1,7 +1,9 @@
 ﻿@page "/user/{id:int}"
 @inject IUserService UserService
+@inject NavigationManager NavigationManager
 
 
+   <button type="submit" @onclick="Logout"> Logout</button>
 
 <h3> Your user ID/Username:  @Id  </h3>
 <p>  Your Name: @myuser.Name </p>
@@ -27,6 +29,11 @@
 
         
     
-
+    
+    private void Logout()
+    {
+     
+      NavigationManager.NavigateTo("/login");
+    }
     
 }
