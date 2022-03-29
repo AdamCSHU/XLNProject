@@ -9,16 +9,16 @@ namespace BlazorApp1.Server.Controllers
     public class UserController : ControllerBase
     {
 
-        public static List<User> users = new List<User>
+        public static List<xlnuser> users = new List<xlnuser>
         {
-            new User { Id = 1, Name = "Ismail" ,
+            new xlnuser { Id = 1, Name = "Ismail" ,
                        Email = "ismail@gmail.com",
                        Address =  "Maplebeck Drive S91WH",
                        PhoneNumber = "999"
 
             
             },
-             new User { Id = 2, Name = "Ahmed" ,
+             new xlnuser { Id = 2, Name = "Ahmed" ,
                        Email = "ahmed@gmail.com",
                        Address =  "Highgate S91WL",
                        PhoneNumber = "911"
@@ -29,7 +29,7 @@ namespace BlazorApp1.Server.Controllers
 
         [HttpGet]
 
-        public async Task<ActionResult<List<User>>> GetUsers()
+        public async Task<ActionResult<List<xlnuser>>> GetUsers()
         {
             return Ok(users);
 
@@ -38,7 +38,7 @@ namespace BlazorApp1.Server.Controllers
         [HttpGet]
         [Route("{id}")]
        
-        public async Task<ActionResult<User>> GetSingleUser(int id)
+        public async Task<ActionResult<xlnuser>> GetSingleUser(int id)
         {
             var user = users.FirstOrDefault(h => h.Id == id);
             if (user == null)

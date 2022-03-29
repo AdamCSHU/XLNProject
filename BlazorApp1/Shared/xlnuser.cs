@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlazorApp1.Shared
 {
-    public  class User
+    public  class xlnuser
     {
         public int Id { get; set; }
 

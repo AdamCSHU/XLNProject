@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ismail\\OneDrive - Sheffield Hallam University\\Documents\\YEAR 2\\XLN\\API TEST\\BlazorApp1\\BlazorApp1\\Shared\\BlazorApp1.Shared.csproj",
+      "projectUniqueName": "C:\\Users\\Ismail\\OneDrive - Sheffield Hallam University\\Documents\\GitHub\\XLNProject\\BlazorApp1\\Shared\\BlazorApp1.Shared.csproj",
       "projectName": "BlazorApp1.Shared",
-      "projectPath": "C:\\Users\\Ismail\\OneDrive - Sheffield Hallam University\\Documents\\YEAR 2\\XLN\\API TEST\\BlazorApp1\\BlazorApp1\\Shared\\BlazorApp1.Shared.csproj",
+      "projectPath": "C:\\Users\\Ismail\\OneDrive - Sheffield Hallam University\\Documents\\GitHub\\XLNProject\\BlazorApp1\\Shared\\BlazorApp1.Shared.csproj",
       "packagesPath": "C:\\Users\\Ismail\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ismail\\OneDrive - Sheffield Hallam University\\Documents\\YEAR 2\\XLN\\API TEST\\BlazorApp1\\BlazorApp1\\Shared\\obj\\",
+      "outputPath": "C:\\Users\\Ismail\\OneDrive - Sheffield Hallam University\\Documents\\GitHub\\XLNProject\\BlazorApp1\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

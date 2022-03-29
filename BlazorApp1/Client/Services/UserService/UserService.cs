@@ -10,11 +10,11 @@ namespace BlazorApp1.Client.Services.UserService
         {
             _http = http;
         }
-        public List<User> Users { get; set ; } = new List<User> ();
+        public List<xlnuser> Users { get; set ; } = new List<xlnuser> ();
 
-        public async Task<User> GetSingleUser(int id)
+        public async Task<xlnuser> GetSingleUser(int id)
         {
-            var result = await _http.GetFromJsonAsync<User>($"api/user/{id}");
+            var result = await _http.GetFromJsonAsync<xlnuser>($"api/user/{id}");
 
           if (result != null)
             {
@@ -31,7 +31,7 @@ namespace BlazorApp1.Client.Services.UserService
         public async Task GetUsers()
         {
        
-            var result = await _http.GetFromJsonAsync<List<User>>("api/user");
+            var result = await _http.GetFromJsonAsync<List<xlnuser>>("api/user");
 
             if (result != null)
                 Users = result;

@@ -2,11 +2,11 @@
 {
     public interface IUserService
     {
-        List<User> Users { get; set; }
+        List<xlnuser> Users { get; set; }
 
         Task GetUsers();
 
-        Task<User> GetSingleUser(int id);
+        Task<xlnuser> GetSingleUser(int id);
 
     }
 }

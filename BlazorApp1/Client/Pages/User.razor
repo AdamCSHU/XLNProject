@@ -1,10 +1,14 @@
-﻿@page "/user"
-@page "/user/{id:int}"
+﻿@page "/user/{id:int}"
 @inject IUserService UserService
 
 
 
-<h1>kugkjhkjh @Id  </h1>
+<h3> Your user ID/Username:  @Id  </h3>
+<p>  Your Name: @myuser.Name </p>
+<p>  Your Address: @myuser.Address </p>
+<p>  Your Email: @myuser.Email </p>
+<p>  Your Phone Number: @myuser.PhoneNumber </p>
+
 
 
 
@@ -13,12 +17,12 @@
     [Parameter]
     public int? Id { get; set; }
     
-    User user = new User { };
+    xlnuser myuser = new xlnuser { };
 
 
     protected override async Task OnParametersSetAsync()
     {
-        user = await UserService.GetSingleUser((int)Id);
+        myuser = await UserService.GetSingleUser((int)Id);
     }
 
         

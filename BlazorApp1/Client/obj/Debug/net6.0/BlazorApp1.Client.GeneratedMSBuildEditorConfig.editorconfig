@@ -11,57 +11,53 @@ build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = BlazorApp1.Client
 build_property.RootNamespace = BlazorApp1.Client
-build_property.ProjectDir = C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\YEAR 2\XLN\API TEST\BlazorApp1\BlazorApp1\Client\
+build_property.ProjectDir = C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\YEAR 2\XLN\API TEST\BlazorApp1\BlazorApp1\Client
+build_property.MSBuildProjectDirectory = C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/YEAR 2/XLN/API TEST/BlazorApp1/BlazorApp1/Client/App.razor]
+[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/GitHub/XLNProject/BlazorApp1/Client/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/YEAR 2/XLN/API TEST/BlazorApp1/BlazorApp1/Client/Pages/Counter.razor]
+[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/GitHub/XLNProject/BlazorApp1/Client/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/YEAR 2/XLN/API TEST/BlazorApp1/BlazorApp1/Client/Pages/FetchData.razor]
+[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/GitHub/XLNProject/BlazorApp1/Client/Pages/FetchData.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/YEAR 2/XLN/API TEST/BlazorApp1/BlazorApp1/Client/Pages/Index.razor]
+[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/GitHub/XLNProject/BlazorApp1/Client/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/YEAR 2/XLN/API TEST/BlazorApp1/BlazorApp1/Client/Pages/LogIn.razor]
+[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/GitHub/XLNProject/BlazorApp1/Client/Pages/LogIn.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nSW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/YEAR 2/XLN/API TEST/BlazorApp1/BlazorApp1/Client/Pages/Test.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/YEAR 2/XLN/API TEST/BlazorApp1/BlazorApp1/Client/Pages/User.razor]
+[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/GitHub/XLNProject/BlazorApp1/Client/Pages/User.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/YEAR 2/XLN/API TEST/BlazorApp1/BlazorApp1/Client/Pages/Users.razor]
+[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/GitHub/XLNProject/BlazorApp1/Client/Pages/Users.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlcnMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/YEAR 2/XLN/API TEST/BlazorApp1/BlazorApp1/Client/Shared/SurveyPrompt.razor]
+[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/GitHub/XLNProject/BlazorApp1/Client/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/YEAR 2/XLN/API TEST/BlazorApp1/BlazorApp1/Client/_Imports.razor]
+[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/GitHub/XLNProject/BlazorApp1/Client/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/YEAR 2/XLN/API TEST/BlazorApp1/BlazorApp1/Client/Shared/MainLayout.razor]
+[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/GitHub/XLNProject/BlazorApp1/Client/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-s8xsnq6cv2
 
-[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/YEAR 2/XLN/API TEST/BlazorApp1/BlazorApp1/Client/Shared/NavMenu.razor]
+[C:/Users/Ismail/OneDrive - Sheffield Hallam University/Documents/GitHub/XLNProject/BlazorApp1/Client/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-aw7s1uks9t
