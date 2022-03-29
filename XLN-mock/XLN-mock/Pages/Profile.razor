@@ -3,36 +3,48 @@
 @using Microsoft.AspNetCore.Components.Rendering
 <PageTitle>@title</PageTitle>
 
-<div class="">
-    <div class="header text-center bg-main">
-        <div class="bg-light p-2">
-            Need to call Customer Service? <a href=tel class="text-decoration-none">0344 880 7777</a>
-        </div>
-        <div class="pt-3 pb-3">
-            <div>
-                <img height="25px" src="../images/user_icon.png" /> @contactName (@contactNumber) - <strong><a href="/logout" class="text-decoration-none link-dark">Logout</a></strong>
-            </div>
-            <h1 class="mt-2 text-white">@title</h1>
-        </div>
+
+
+
+
+
+
+<div class="header text-center bg-main">
+    <div class="bg-light p-2">
+        Need to call Customer Service? <a href=tel class="text-decoration-none">0344 880 7777</a>
     </div>
-    <div class="container px-4 pb-4 mb-3 bg-main">
-        <div class="row">
-            <div class="col">Company Name: @companyName</div>
-            <div class="col">Contact Name: @contactName</div>
+    <div class="pt-3 pb-3">
+        <div>
+            <img height="25px" src="../images/user_icon.png" /> @contactName (@accountNumber) - <strong><a href="/logout" class="text-decoration-none link-dark">Logout</a></strong>
         </div>
-        <div class="row">
-            <div class="col">Contact Phone: @contactNumber</div>
-            <div class="col">Contact Email: @contactEmail</div>
-        </div>
+        <h1 class="mt-2 text-white">@title</h1>
     </div>
-    
-    <div>
-        
-        <h2 class="ps-3">CLI's Held with XLN</h2>
-        <div class="d-flex flex-column">
-            @{ CLIlist(__builder); }
-        </div>
+</div>
+<div class="container px-4 pb-4 mb-3 bg-main">
+    <div class="row">
+        <div class="col">Company Name: @companyName</div>
+        <div class="col">Contact Name: @contactName</div>
     </div>
+    <div class="row">
+        <div class="col">Contact Phone: @contactNumber</div>
+        <div class="col">Contact Email: @contactEmail</div>
+    </div>
+</div>
+
+<div>
+    <div class="d-flex flex-row ps-3">
+        <div class="me-auto">
+            <h2>CLI's Held with XLN</h2>
+        </div>
+        <div class="flex-shrink-1"><button @onclick="@report" class="m-2 btn btn-sm bg-main">Report Fault</button></div>
+    </div>
+    <div class="d-flex flex-column">
+        @{CLIlist(__builder);}
+    </div>
+</div>
+<div>
+    <h2 class="ps-3">Faults</h2>
+
 </div>
 
 
@@ -47,12 +59,14 @@
     string contactName;
     string contactEmail;
     string contactNumber;
+    int accountNumber;
     private void loadFromDB()
     {
         companyName = "SmallBizAnon";
         contactName = "Jennifer";
         contactEmail = "email@gmail.com";
         contactNumber = "0734534545";
+        accountNumber = 4857597;
     }
 
     private void logout()
@@ -67,12 +81,11 @@
         new string[] {"Your second CLI","true"}
     };
 
-
-    private void report(string[] cli)
+    private void report()
     {
-        NavigationManager.NavigateTo($"report?cli={cli[0]}&iscli={cli[1]}");
-
+        NavigationManager.NavigateTo("report");
     }
+    
     void CLIlist(RenderTreeBuilder __builder)
     {
 
@@ -81,8 +94,8 @@
             string[] pass = clis[x];
             <div class="border d-flex flex-row bg-light">
                 <div class="p-1 me-auto">@clis[x][0]</div>
-            <div class="flex-shrink-1"><a href="/troubleshoot" class="m-2 btn bg-danger">Troubleshoot</a></div>
-            <div class="flex-shrink-1"><button @onclick="@(e=>report(pass))" class="m-2 btn bg-main">Report Fault</button></div>
+            <div class="flex-shrink-1"><a href="/troubleshoot" class="m-2 btn btn-sm bg-danger">Troubleshoot</a></div>
+            
         </div>
         }
     }

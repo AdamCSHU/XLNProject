@@ -1,0 +1,36 @@
+﻿@page "/submit"
+@using Microsoft.AspNetCore.Components.Rendering
+@inject NavigationManager NavigationManager;
+@namespace XLN_mock.Model
+<PageTitle>@title</PageTitle>
+
+<div class="text-center bg-main pt-4 pb-2 mb-5 border-bottom border-5 border-dark">
+    <h2>@name @accept</h2>
+</div>
+
+
+
+@code {
+    private string title = "Report a Fault";
+
+    /*Querry String*/
+    string name { get; set; }
+    string accept { get; set; }
+    protected override void OnInitialized()
+    {
+        getname();
+        getaccept();
+    }
+
+    public void getname()
+    {
+        var uri = new Uri(NavigationManager.Uri);
+        name = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query).TryGetValue("name", out var type) ? type.First() : "";
+    }
+    public void getaccept()
+    {
+        var uri = new Uri(NavigationManager.Uri);
+        accept = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query).TryGetValue("accept", out var type) ? type.First() : "";
+    }
+
+}

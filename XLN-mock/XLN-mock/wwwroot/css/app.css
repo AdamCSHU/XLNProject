@@ -13,6 +13,21 @@ html, body {
         display: none;
     }
 /* MAIN ADDED CSS */
+.btn-primary {
+    background-color: #00a4c4;
+    border-color: #00849e;
+}
+    .btn-primary:hover {
+        background-color: #00849e;
+        border-color: #00849e;
+    }
+    .btn-primary:disabled {
+        background-color: #1ca3bd;
+    }
+    .btn-primary:focus {
+        background-color: #00849e;
+        border-color: #00849e;
+    }
 .main-bg {
     background-color: #00a4c4 !important;
 }
@@ -63,11 +78,7 @@ a, .btn-link {
     color: #0071c1;
 }
 
-.btn-primary {
-    color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
-}
+
 
 .content {
     height:100%;
