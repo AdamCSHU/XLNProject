@@ -1,0 +1,23 @@
+﻿@page "/page1"
+@inject NavigationManager UriHelper
+
+<h3>Click button to pass the value to other page.</h3>
+<button class="btn btn-primary" @onclick="OnClick">Pass Value</button>
+
+<h3>Test Form.</h3>
+<button class="btn btn-primary" @onclick="@(e=>TestForm())">Pass Value</button>
+
+@code {
+
+    private string parameter = "Harrold";
+    private int id = 1;
+    private List<string> list = new List<string> { "Dave", "1", "false" };
+    private void OnClick()
+    {
+        UriHelper.NavigateTo($"page2?id={id}&name={parameter}");
+    }
+    private void TestForm()
+    {
+        UriHelper.NavigateTo($"test?name={list[0]}&id={list[1]}&cli={list[2]}");
+    }
+}
