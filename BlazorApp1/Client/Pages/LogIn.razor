@@ -30,7 +30,7 @@
   </form>
 
   
-  <label @bind=user.Name>  </label>
+
                 
 @code {
     private string UserName { get; set; } = string.Empty;
@@ -41,19 +41,28 @@
 
     private void submit()
     {
-     
+        if ()
+        {
+            
+        }
         if (UserName == "1" && Password == "1234")
         {  
-            
-         NavigationManager.NavigateTo($"user/{1}");
+
+            NavigationManager.NavigateTo($"user/{1}");
 
         }
-         if (UserName == "2" && Password == "1234")
+        if (UserName == "2" && Password == "1234")
         {  
-            
-         NavigationManager.NavigateTo($"user/{2}");
+
+            NavigationManager.NavigateTo($"user/{2}");
 
         }
+        if (UserName == "3" && Password == "1234")
+        {
+
+            NavigationManager.NavigateTo($"user/{3}");
+        }
+
         else
         {
 

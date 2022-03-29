@@ -14,7 +14,9 @@ namespace BlazorApp1.Server.Controllers
             new xlnuser { Id = 1, Name = "Ismail" ,
                  CompanyName = " Bakes ",
                        Email = "ismail@gmail.com",
-                       Address =  "Maplebeck Drive S91WH",
+                       Address =  "Thone Drive S91QR",
+                       UserName =  "IsmailBakes",
+                       Password =  "1234",
                        PhoneNumber = "0770128013"
 
             
@@ -23,7 +25,9 @@ namespace BlazorApp1.Server.Controllers
              new xlnuser { Id = 2, Name = "Ahmed" ,
                   CompanyName = " Ahemds Foods ",
                        Email = "ahmed@gmail.com",
-                       Address =  "Highgate S91WL",
+                       Address =  "Highgate S43ASD",
+                       UserName =  "AhmedFoods",
+                       Password =  "1234",
                        PhoneNumber = "072304713201"
 
 
@@ -32,8 +36,10 @@ namespace BlazorApp1.Server.Controllers
                  CompanyName = " Sandwhich mani ",
                        Email = "john@gmail.com",
                        Address =  "Hasfield Drive S32QR",
+                       UserName =  "JohnK",
+                       Password =  "1234",
                        PhoneNumber = "07237030812"
-
+                 
 
 
             },
