@@ -1,0 +1,20 @@
+.login[b-sjqrstyqns]{
+    border: 1px solid rgb(128, 128, 128, 0.5);
+    border-radius: 5px;
+    padding:50px 40px;
+    margin-top: -25px;
+    width:400px;
+}
+.logo[b-sjqrstyqns]{
+    width:250px;
+}
+.img-contianer[b-sjqrstyqns]{
+    text-align:center;
+}
+.centered-holder[b-sjqrstyqns] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+}

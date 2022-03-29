@@ -1,0 +1,47 @@
+﻿@page "/landing"
+@inject NavigationManager NavigationManager
+@using XLN_mock.Model;
+
+<PageTitle>Log In</PageTitle>
+
+
+
+
+<span class="centered-holder">
+ 
+        <div class="login">
+            <div class="img-contianer mb-5">
+               <img src="images/logo.svg" asp-append-version="true" alt="XLN Logo" class="logo" /> 
+            </div>
+            <EditForm Model=@NewUser OnSubmit=@FormSubmitted>
+                <DataAnnotationsValidator />
+              <div class="form-group mb-4">
+                <!-- label for="accNum">Account Info</label -->
+                <input type="text" class="form-control" id="accNum" aria-describedby="emailHelp" placeholder="Account Number">
+                <!-- small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</!--small> -->
+              </div>
+              <div class="form-group mb-4">
+                <!-- <label for="password">Password</label -->
+                <input type="password" class="form-control" id="password" placeholder="Password">
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </EditForm>
+    
+        </div>
+</span>
+
+@code{
+    User NewUser = new User();
+
+    private void FormSubmitted(EditContext editContext) => NavigationManager.NavigateTo("/profile");
+
+
+    /*
+    Offer a landing page where the user can enter a customer account number/product identifier (phone number) which in the case where the account number is input will retrieve their current: -
+    Phone line(s)
+    Broadband(s) (ADSL/Fibre)
+
+    */
+}
