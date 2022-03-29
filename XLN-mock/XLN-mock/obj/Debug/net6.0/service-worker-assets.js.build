@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-lvPKfVlkZjfO7iz9Xw3aO8Z3NVdndomVSEhK7c9b9Wg=",
+      "hash": "sha256-IWdbVQA1GTqIl5Uf0HhoRx+MKXRZPhrbAUjKqslQ0lU=",
       "url": "css\/app.css"
     },
     {
@@ -885,11 +885,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-vSpf08cTjbJcNgXkLy8fH+oWN9SzAcqavMSr8IhCIEc=",
+      "hash": "sha256-5jdpePcMPpaaOEsB9muHTd8mV80Z8BeDKqvtfV+aRVM=",
       "url": "_framework\/XLN-mock.dll"
     },
     {
-      "hash": "sha256-\/RHM\/VEoT9VY473m\/HY5l18MY1f5egrFX1yFPYE11is=",
+      "hash": "sha256-qBBReZz5GmJiF\/1HIDHWGxWAhmMfxqf0ONTQ8NnSHAE=",
       "url": "_framework\/XLN-mock.pdb"
     },
     {
@@ -897,9 +897,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-9iZrQwa8RytOaXPILSTkX4CuxSnkrjvTzkzfqDbsMxg=",
+      "hash": "sha256-1OThWEXDVJqcntVZlJWePs98juSjVTIn4LhVyX\/B+Iw=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "JVw6eM5U"
+  "version": "eb\/xmoLu"
 };
