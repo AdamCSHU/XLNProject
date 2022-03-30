@@ -22,8 +22,8 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/FetchData.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Chatbot.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhdGJvdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Index.razor]
@@ -70,10 +70,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Form - Copy.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybSAtIENvcHkucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-np3z7xtd3z
-
 [C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Form.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-70cp7kig2n
@@ -93,6 +89,10 @@ build_metadata.AdditionalFiles.CssScope = b-4borvvmvci
 [C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Troubleshoot.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJvdWJsZXNob290LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-jxc1e3yfh2
+
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/ZOLDForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcWk9MREZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-g7dwvdvofq
 
 [C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=

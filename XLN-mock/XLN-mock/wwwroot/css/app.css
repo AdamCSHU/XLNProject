@@ -43,7 +43,7 @@ html, body {
 .loader {
     position: fixed;
     top: 50%;
-    margin-left:45%;
+    margin-left: calc(~"50vh - 92px");
     border: 12px solid lightgrey;
     border-radius: 50%;
     border-top: 12px solid #3498db;

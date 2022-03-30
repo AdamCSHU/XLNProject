@@ -14,9 +14,9 @@ namespace XLN_mock.Model
             ContactEmail=email;
             ContactPhone=phone;
         }
-        public void addCLIs(List<string> clis)
+        public void addProduct(List<string[]> product)
         {
-            CLIs = clis;
+            Products = product;
         }
         public void addFault(FaultForm form)
         {
@@ -46,7 +46,8 @@ namespace XLN_mock.Model
 
         public string ContactPhone { get; set; }
 
-        public List<string> CLIs { get; set; }
+        public List<string[]> Products { get; set; }
+
 
         public List<FaultForm> Faults { get; set; }
     }

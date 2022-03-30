@@ -32,15 +32,30 @@
     </div>
 </div>
 
+
+
+
+
+<!-- CLIS AND FAULT LISTS -->
+
 <div>
     <div class="d-flex flex-row ps-3 align-items-center">
         <div class="me-auto">
-            <h2>CLI's Held with XLN</h2>
+            <h2>Phone Lines</h2>
         </div>
         <div class="flex-shrink-1"><button @onclick="@report" class="m-2 btn btn-sm bg-main">Report Fault</button></div>
     </div>
     <div class="d-flex flex-column">
-        @{CLIlist(__builder);}
+        @{PhoneLines(__builder);}
+    </div>
+    <div class="d-flex flex-row ps-3 align-items-center">
+        <div class="me-auto">
+            <h2>Line and Broadbands</h2>
+        </div>
+        <div class="flex-shrink-1"><button @onclick="@report" class="m-2 btn btn-sm bg-main">Report Fault</button></div>
+    </div>
+    <div class="d-flex flex-column">
+        @{BroadLines(__builder);}
     </div>
 </div>
 <div>
@@ -48,7 +63,7 @@
         <div class="me-auto">
             <h2>Faults</h2>
         </div>
-        <div class="flex-shrink-1"><button @onclick="@editFault" class="m-2 btn btn-sm bg-main">Cancel/Close Faults</button></div>
+        <div class="flex-shrink-1"><button @onclick="@editFault" class="m-2 btn btn-sm text-white" style="background-color:#ff6363;">Cancel/Close Faults</button></div>
     </div>
     <div class="d-flex flex-column">
         @{FaultList(__builder);}
@@ -61,8 +76,13 @@
     private string title = "Profile";
 
     User user;
-    List<string> clis = new List<string>
-    {"CLI #248","Broadband #456","CLI #141"};
+    List<string[]> clis = new List<string[]>
+    {
+        new string[] {"01142567567", "false"},
+        new string[] {"01142567890","true" },
+        new string[] {"01142567910","true" },
+        new string[] {"01142567678","false" }
+    };
     FaultForm fault1;
 
     protected override async Task OnInitializedAsync()
@@ -72,9 +92,9 @@
     private void loadFromDB()
     {
         user = new User(4857597, "SmallBizAnon", "Jennifer", "email@gmail.com", "0734534545");
-        user.addCLIs(clis);
-        fault1 = new FaultForm(user.CLIs[0],"Pending");
-        Console.WriteLine(user.CLIs[0]);
+        user.addProduct(clis);
+        fault1 = new FaultForm(user.Products[0][0],"Pending");
+        Console.WriteLine(user.Products[0][0]);
         user.addFault(fault1);
     }
 
@@ -93,12 +113,38 @@
     void CLIlist(RenderTreeBuilder __builder)
     {
 
-        for (int x = 0; x < user.CLIs.Count; x++)
+        for (int x = 0; x < user.Products.Count; x++)
         {
             <div class="border d-flex flex-row bg-light align-items-center">
-                <div class="p-1 me-auto">@user.CLIs[x]</div>
+                <div class="p-1 me-auto">@user.Products[x][0]</div>
                 <div class="flex-shrink-1"><a href="/troubleshoot" class="m-2 btn btn-sm bg-danger">Troubleshoot</a></div>
             </div>
+        }
+    }
+    void PhoneLines(RenderTreeBuilder __builder)
+    {
+        for(int x = 0; x < user.Products.Count; x++)
+        {
+            if (user.Products[x][1].Equals("false"))
+            {
+                <div class="border d-flex flex-row bg-light align-items-center">
+                    <div class="p-1 me-auto">@user.Products[x][0]</div>
+                <div class="flex-shrink-1"><a href="/troubleshoot" class="m-2 btn btn-sm bg-danger">Troubleshoot</a></div>
+            </div>
+            }
+        }
+    }
+    void BroadLines(RenderTreeBuilder __builder)
+    {
+        for(int x = 0; x < user.Products.Count; x++)
+        {
+            if (user.Products[x][1].Equals("true"))
+            {
+                <div class="border d-flex flex-row bg-light align-items-center">
+                    <div class="p-1 me-auto">@user.Products[x][0]</div>
+                <div class="flex-shrink-1"><a href="/troubleshoot" class="m-2 btn btn-sm bg-danger">Troubleshoot</a></div>
+            </div>
+            }
         }
     }
 
@@ -114,7 +160,7 @@
             <div class="border d-flex flex-row bg-light align-items-center">
                 <div class="p-1 me-auto">@user.Faults[x].FaultAgainst</div>
                 <div class="flex-shrink-1"><button class="m-2 btn btn-sm bg-warning">@user.Faults[x].Status</button></div>
-                <div hidden=@(!editing)><button @onclick=@(e => delete(user.Faults[x].FaultAgainst))><i class="oi oi-delete"/></button></div>
+                <div hidden=@(!editing)><button class="border-0 bg-transparent" @onclick=@(e => delete(user.Faults[x].FaultAgainst))><i class="oi oi-delete"/></button></div>
             </div>
             Console.WriteLine(x);
         }

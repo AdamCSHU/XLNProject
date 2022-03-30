@@ -11,12 +11,14 @@
 </style>
 
 <div class="text-center bg-main pt-4 pb-2 mb-5 border-bottom border-5 border-dark">
-    <h2>Raising a fault against: @cli</h2>
+    <h2>Raising a fault against: @form.FaultAgainst</h2>
 </div>
 
 <div class="container">
     <EditForm Model="@form" OnValidSubmit=@ValidFormSubmitted>
         <DataAnnotationsValidator />
+
+        <!-- Contact Info -->
         <div class="form-group">
             <label for="companyName">Company Name</label>
             <InputText @bind-Value=form.CompanyName class="form-control" id="companyName" />
@@ -45,8 +47,23 @@
             <ValidationMessage For=@(() => form.EngineerNotes) />
         </div>
 
+        <!-- End Contact Info-->
 
         <h3>Incident Report</h3>
+
+        <!-- --
+        <div class="form-group">
+            <label for="against"></label>
+            <InputSelect @bind-Value="form.FaultAgainst" class="form-control" id="against">
+            <option value="" selected disabled>Select one</option>
+            @foreach(var option in user.CLIs)
+            {
+                <option value="@option">@option</option>
+            }
+            </InputSelect>
+        </div>
+        !---->
+        @if(form.FaultAgainst!=null){
 
         <div class="form-group">
             <label for="affecting">What is the fault affecting? If both slect CLI.</label><br />
@@ -64,7 +81,7 @@
         {
             <div class="form-group">
                 <label for="faultType">Incident Type</label>
-                <InputSelect @bind-Value=form.IncidentType class="form-control" id="faultType" placeHolder="Select One">
+                <InputSelect @bind-Value=form.IncidentType class="form-control" id="faultType">
 
                     @if (form.AffectingWhat.Equals("CLI"))
                     {
@@ -160,6 +177,7 @@
             <button type="submit" class="btn btn-primary" value="Save" disabled="@(!context.Validate())">Submit</button>
         </div>
 
+        }
     </EditForm>
 </div>
 
@@ -167,10 +185,15 @@
 @code {
     private string title = "Report a Fault";
     FaultForm form = new FaultForm();
-    void ValidFormSubmitted(EditContext editContext)
+
+    User user;
+    List<string[]> clis = new List<string[]>
     {
-        NavigationManager.NavigateTo($"/submit?comp={form.CompanyName}&name={form.ContactName}&email={form.ContactEmail}&phone={form.ContactPhone}&mobile={form.MobilePhone}&engineer={form.EngineerNotes}&affecting={form.AffectingWhat}&incident={form.IncidentType}&incidentDetails={form.IncidentDetails}&inter={form.IsIntermittent}&interDetails={form.IntermittentDetails}&diagnostics={form.DiagnosticResults}&accept={form.AcceptsWarning}");
-    }
+        new string[] {"01142567567", "false"},
+        new string[] {"01142567890","true" },
+        new string[] {"01142567910","true" },
+        new string[] {"01142567678","false" }
+    };
 
     /*FAKE DATABASE*/
     protected override async Task OnInitializedAsync()
@@ -179,12 +202,23 @@
     }
     private void loadFromDB()
     {
-        form.CompanyName = "Your Company";
-        form.ContactName = "Your Name";
-        form.ContactEmail = "email@gmail.com";
-        form.ContactPhone = "07345345456";
+        user = new User(4857597, "SmallBizAnon", "Jennifer", "email@gmail.com", "0734534545");
+        user.addProduct(clis);
+        form.CompanyName = user.CompanyName;
+        form.ContactName = user.ContactName;
+        form.ContactEmail = user.ContactEmail;
+        form.ContactPhone = user.ContactPhone;
     }
-    
+
+
+
+    void ValidFormSubmitted(EditContext editContext)
+    {
+        NavigationManager.NavigateTo($"/submit?comp={form.CompanyName}&name={form.ContactName}&email={form.ContactEmail}&phone={form.ContactPhone}&mobile={form.MobilePhone}&engineer={form.EngineerNotes}&affecting={form.AffectingWhat}&incident={form.IncidentType}&incidentDetails={form.IncidentDetails}&inter={form.IsIntermittent}&interDetails={form.IntermittentDetails}&diagnostics={form.DiagnosticResults}&accept={form.AcceptsWarning}");
+    }
+
+
+
     private List<string> rdOptions = new List<string> { "CLI", "Broadband" };
     private List<string> CLIfaults = new List<string>
     {
@@ -242,6 +276,8 @@
     protected override void OnInitialized()
     {
         GetCLI();
+        Console.WriteLine(cli);
+        form.FaultAgainst = cli;
     }
 
     public void GetCLI()
