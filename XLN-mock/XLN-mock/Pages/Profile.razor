@@ -1,0 +1,130 @@
+﻿@page "/profile"
+@inject NavigationManager NavigationManager;
+@using Microsoft.AspNetCore.Components.Rendering
+@namespace XLN_mock.Model
+<PageTitle>@title</PageTitle>
+
+
+
+
+
+
+
+<div class="header text-center bg-main">
+    <div class="bg-light p-2">
+        Need to call Customer Service? <a href=tel class="text-decoration-none">0344 880 7777</a>
+    </div>
+    <div class="pt-3 pb-3">
+        <div>
+            <img height="25px" src="../images/user_icon.png" /> @user.ContactName (@user.AccountNumber) - <strong><a href="/logout" class="text-decoration-none link-dark">Logout</a></strong>
+        </div>
+        <h1 class="mt-2 text-white">@title</h1>
+    </div>
+</div>
+<div class="container px-4 pb-4 mb-3 bg-main">
+    <div class="row">
+        <div class="col">Company Name: @user.CompanyName</div>
+        <div class="col">Contact Name: @user.ContactName</div>
+    </div>
+    <div class="row">
+        <div class="col">Contact Phone: @user.ContactPhone</div>
+        <div class="col">Contact Email: @user.ContactEmail</div>
+    </div>
+</div>
+
+<div>
+    <div class="d-flex flex-row ps-3 align-items-center">
+        <div class="me-auto">
+            <h2>CLI's Held with XLN</h2>
+        </div>
+        <div class="flex-shrink-1"><button @onclick="@report" class="m-2 btn btn-sm bg-main">Report Fault</button></div>
+    </div>
+    <div class="d-flex flex-column">
+        @{CLIlist(__builder);}
+    </div>
+</div>
+<div>
+    <div class="d-flex flex-row ps-3 mt-2 align-items-center">
+        <div class="me-auto">
+            <h2>Faults</h2>
+        </div>
+        <div class="flex-shrink-1"><button @onclick="@editFault" class="m-2 btn btn-sm bg-main">Cancel/Close Faults</button></div>
+    </div>
+    <div class="d-flex flex-column">
+        @{FaultList(__builder);}
+    </div>
+</div>
+
+
+
+@code {
+    private string title = "Profile";
+
+    User user;
+    List<string> clis = new List<string>
+    {"CLI #248","Broadband #456","CLI #141"};
+    FaultForm fault1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        loadFromDB();
+    }
+    private void loadFromDB()
+    {
+        user = new User(4857597, "SmallBizAnon", "Jennifer", "email@gmail.com", "0734534545");
+        user.addCLIs(clis);
+        fault1 = new FaultForm(user.CLIs[0],"Pending");
+        Console.WriteLine(user.CLIs[0]);
+        user.addFault(fault1);
+    }
+
+    private void logout()
+    {
+        NavigationManager.NavigateTo($"/logout");
+    }
+
+    
+
+
+    private void report()
+    {
+        NavigationManager.NavigateTo("report");
+    }
+    void CLIlist(RenderTreeBuilder __builder)
+    {
+
+        for (int x = 0; x < user.CLIs.Count; x++)
+        {
+            <div class="border d-flex flex-row bg-light align-items-center">
+                <div class="p-1 me-auto">@user.CLIs[x]</div>
+                <div class="flex-shrink-1"><a href="/troubleshoot" class="m-2 btn btn-sm bg-danger">Troubleshoot</a></div>
+            </div>
+        }
+    }
+
+    bool editing = false;
+    private void editFault()
+    {
+        editing = !editing;
+    }
+    void FaultList(RenderTreeBuilder __builder)
+    {
+        for(int x=0; x< user.Faults.Count; x++)
+        {
+            <div class="border d-flex flex-row bg-light align-items-center">
+                <div class="p-1 me-auto">@user.Faults[x].FaultAgainst</div>
+                <div class="flex-shrink-1"><button class="m-2 btn btn-sm bg-warning">@user.Faults[x].Status</button></div>
+                <div hidden=@(!editing)><button @onclick=@(e => delete(user.Faults[x].FaultAgainst))><i class="oi oi-delete"/></button></div>
+            </div>
+            Console.WriteLine(x);
+        }
+        
+    }
+    private void delete(string against)
+    {
+        Console.WriteLine(against);
+        Console.WriteLine("Deleting");
+        user.delete(against);
+    }
+
+}
