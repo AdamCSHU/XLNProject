@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ikmElJItJaFMkg7BZc7vXt8AXgFIH9lh9wRi5xLOEmu21JyTXa8HRkl3kCOBPA8Qls0HGWZm0Ucq0BG4rLeDYQ==",
+  "dgSpecHash": "4Rl0LcwV4mZwqalINxCmevHeR2pofAZmYwxAlmPcdHVrDB3qNOzAAnC6qYngfdj1NZcsMEPc1W2Zbvbodriy0A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Ismail\\OneDrive - Sheffield Hallam University\\Documents\\GitHub\\XLNProject\\BlazorApp1\\Server\\BlazorApp1.Server.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Ismail\\.nuget\\packages\\blazored.localstorage\\4.2.0\\blazored.localstorage.4.2.0.nupkg.sha512",
+    "C:\\Users\\Ismail\\.nuget\\packages\\blazored.toast\\3.2.2\\blazored.toast.3.2.2.nupkg.sha512",
+    "C:\\Users\\Ismail\\.nuget\\packages\\blazored.typeahead\\4.6.0\\blazored.typeahead.4.6.0.nupkg.sha512",
     "C:\\Users\\Ismail\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.3\\microsoft.aspnetcore.authorization.6.0.3.nupkg.sha512",
     "C:\\Users\\Ismail\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.3\\microsoft.aspnetcore.components.6.0.3.nupkg.sha512",
     "C:\\Users\\Ismail\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.3\\microsoft.aspnetcore.components.analyzers.6.0.3.nupkg.sha512",

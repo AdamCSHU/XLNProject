@@ -15,14 +15,14 @@
 <p>  Your Phone Number: @myuser.PhoneNumber </p>
 
 
-
+<button type="submit" @onclick="NextPage"  > View Fault  </button> 
 
 @code {
 
     [Parameter]
     public int? Id { get; set; }
     
-    xlnuser myuser = new xlnuser { };
+    xlnuser myuser = new xlnuser { Fault = new Fault()};
 
 
     protected override async Task OnParametersSetAsync()
@@ -36,5 +36,9 @@
      
       NavigationManager.NavigateTo("/login");
     }
-    
+       private void NextPage()
+    {
+     
+      NavigationManager.NavigateTo($"flt/{Id}");
+    }
 }

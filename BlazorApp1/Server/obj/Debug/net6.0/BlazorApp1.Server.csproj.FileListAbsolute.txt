@@ -92,3 +92,6 @@ C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProje
 C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Server\obj\Debug\net6.0\BlazorApp1.Server.pdb
 C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Server\obj\Debug\net6.0\BlazorApp1.Server.genruntimeconfig.cache
 C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Server\obj\Debug\net6.0\ref\BlazorApp1.Server.dll
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Server\bin\Debug\net6.0\Blazored.LocalStorage.dll
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Server\bin\Debug\net6.0\Blazored.Toast.dll
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Server\bin\Debug\net6.0\Blazored.Typeahead.dll

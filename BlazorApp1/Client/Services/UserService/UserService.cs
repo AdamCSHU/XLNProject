@@ -10,7 +10,19 @@ namespace BlazorApp1.Client.Services.UserService
         {
             _http = http;
         }
+       
         public List<xlnuser> Users { get; set ; } = new List<xlnuser> ();
+        public List<Fault> faults { get; set; } = new List<Fault>();
+
+        public async Task GetFaults()
+        {
+            var result = await _http.GetFromJsonAsync<List<Fault>>("api/user/faults");
+            if (result != null)
+            {
+                faults = result;
+            }
+        
+        }
 
         public async Task<xlnuser> GetSingleUser(int id)
         {
@@ -29,7 +41,7 @@ namespace BlazorApp1.Client.Services.UserService
         }
 
         public async Task GetUsers()
-        {
+        { 
        
             var result = await _http.GetFromJsonAsync<List<xlnuser>>("api/user");
 

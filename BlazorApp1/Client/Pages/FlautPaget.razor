@@ -1,0 +1,33 @@
+﻿@page "/flt/{id:int}"
+@inject IUserService UserService
+@inject NavigationManager NavigationManager
+
+<h3>Fault Page </h3>
+
+<p>  Fault Id: @myuser.Fault.Id </p>
+<p>  Status: @myuser.Fault.Status </p>
+<p>  Notes: @myuser.Fault.Notes </p>
+<p>  FaultAgainst: @myuser.Fault.FaultAgainst </p>
+<p>  DivertRequired: @myuser.Fault.DivertRequired </p>
+<p>  DivertPhone: @myuser.Fault.DivertPhone </p>
+<p>  AffectingWhat: @myuser.Fault.AffectingWhat </p>
+<p>  IncidentDetails: @myuser.Fault.IncidentDetails </p>
+<p>  IsIntermittent: @myuser.Fault.IsIntermittent </p>
+<p>  IntermittentDetails: @myuser.Fault.IntermittentDetails </p>
+<p>  DiagnosticsResults: @myuser.Fault.DiagnosticsResults </p>
+<p>  AcceptsWarning: @myuser.Fault.AcceptsWarning </p>
+
+
+@code {
+      [Parameter]
+
+    public int? Id { get; set; }
+
+        xlnuser myuser = new xlnuser { Fault = new Fault()};
+
+          protected override async Task OnParametersSetAsync()
+    {
+        myuser = await UserService.GetSingleUser((int)Id);
+    }
+
+}

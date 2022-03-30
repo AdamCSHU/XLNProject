@@ -1644,3 +1644,15 @@ C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProje
 C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\obj\Debug\net6.0\refint\BlazorApp1.Client.dll
 C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\obj\Debug\net6.0\BlazorApp1.Client.pdb
 C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\obj\Debug\net6.0\ref\BlazorApp1.Client.dll
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\bin\Debug\net6.0\Blazored.LocalStorage.dll
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.Toast.dll
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.Typeahead.dll
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.Typeahead.dll.gz
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\bin\Debug\net6.0\wwwroot\_framework\Blazored.Toast.dll.gz
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\bin\Debug\net6.0\Blazored.Toast.dll
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\bin\Debug\net6.0\Blazored.Typeahead.dll
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\obj\Debug\net6.0\build-gz\MvcIr6EA.gz
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\obj\Debug\net6.0\build-gz\SsNFFcJk.gz
+C:\Users\Ismail\OneDrive - Sheffield Hallam University\Documents\GitHub\XLNProject\BlazorApp1\Client\obj\Debug\net6.0\build-gz\hCDJOjke.gz
