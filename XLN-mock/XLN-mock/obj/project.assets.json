@@ -1672,23 +1672,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ghosa\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\labstudent\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ghosa\\Source\\Repos\\XLNProject\\XLN-mock\\XLN-mock\\XLN-mock.csproj",
+      "projectUniqueName": "C:\\Users\\labstudent\\Desktop\\XLN-mock\\XLN-mock\\XLN-mock.csproj",
       "projectName": "XLN-mock",
-      "projectPath": "C:\\Users\\ghosa\\Source\\Repos\\XLNProject\\XLN-mock\\XLN-mock\\XLN-mock.csproj",
-      "packagesPath": "C:\\Users\\ghosa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ghosa\\Source\\Repos\\XLNProject\\XLN-mock\\XLN-mock\\obj\\",
+      "projectPath": "C:\\Users\\labstudent\\Desktop\\XLN-mock\\XLN-mock\\XLN-mock.csproj",
+      "packagesPath": "C:\\Users\\labstudent\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\labstudent\\Desktop\\XLN-mock\\XLN-mock\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ghosa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\labstudent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

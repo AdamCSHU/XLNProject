@@ -1,11 +1,15 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-8wooqOtnufKwbiiVAGUPkoZkYm+J8BRtxwbCYlQd+Wg=",
+      "hash": "sha256-IWdbVQA1GTqIl5Uf0HhoRx+MKXRZPhrbAUjKqslQ0lU=",
       "url": "css\/app.css"
     },
     {
-      "hash": "sha256-SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7\/p4nS6D\/0=",
+      "hash": "sha256-wOo4G8X\/vj3z0F6ueCW9pB+ruPufzpFNeOf1QpGk2dM=",
+      "url": "css\/app.scss"
+    },
+    {
+      "hash": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
       "url": "css\/bootstrap\/bootstrap.min.css"
     },
     {
@@ -85,7 +89,7 @@
       "url": "sample-data\/weather.json"
     },
     {
-      "hash": "sha256-Sgl9ISABgnBFGGRMsqFaPLXRGFmyKF54593iy\/yXeJM=",
+      "hash": "sha256-etkR0+tgCT7tPkI9\/T4BAGEjAkKE+PuVXDOhmHUc1UQ=",
       "url": "XLN-mock.styles.css"
     },
     {
@@ -854,7 +858,7 @@
     },
     {
       "hash": "sha256-pRmcHKZN4T\/YbX9dj6ITT4sNtkJ9w07OLcwl4645nPg=",
-      "url": "_framework\/dotnet.6.0.3.4ygwf242uq.js"
+      "url": "_framework\/dotnet.6.0.3.qdkojmdaxu.js"
     },
     {
       "hash": "sha256-scXGarUHqfFWPq0d6kt1FgrQvd1\/ndIwUTFptznHbsc=",
@@ -881,11 +885,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-44BNS2twRQ3O4vNSxQyH069R+NkhMovCKR+nq\/\/pPWY=",
+      "hash": "sha256-5jdpePcMPpaaOEsB9muHTd8mV80Z8BeDKqvtfV+aRVM=",
       "url": "_framework\/XLN-mock.dll"
     },
     {
-      "hash": "sha256-uTrQG0jZO+Guoy7LaIaMcxmaTB3nwJd7JbkwZqOf2F0=",
+      "hash": "sha256-qBBReZz5GmJiF\/1HIDHWGxWAhmMfxqf0ONTQ8NnSHAE=",
       "url": "_framework\/XLN-mock.pdb"
     },
     {
@@ -893,9 +897,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-mOIbAg80UxxlqGlLu6u\/70QhRSqXT17f62lM1tKXRG4=",
+      "hash": "sha256-1OThWEXDVJqcntVZlJWePs98juSjVTIn4LhVyX\/B+Iw=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "PFsVFX0M"
+  "version": "eb\/xmoLu"
 };

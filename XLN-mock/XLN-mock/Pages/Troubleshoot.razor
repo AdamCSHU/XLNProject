@@ -1,0 +1,323 @@
+﻿@page "/troubleshoot"
+
+@using Microsoft.AspNetCore.Components.Rendering
+<PageTitle>troubleshoot</PageTitle>
+<style>
+    a{color:black; text-decoration:none;}
+</style>
+
+<div class="page-heading text-center bg-main text-white pt-3">
+    <h1>Troubleshooting</h1>
+        <div class="d-flex flex-row justify-content-between p-2">
+        @if (displayWhat)
+        {
+            <button class="text-white bg-transparent border-0" @onclick=DisplayPhone><h2>Business Phone</h2></button>
+            <button class="text-black bg-transparent border-0" @onclick=DisplayBroadband><h2>BusinessBroadband</h2></button>
+        }
+        else
+        {
+            <button class="text-black bg-transparent border-0" @onclick=DisplayPhone><h2>Business Phone</h2></button>
+            <button class="text-white bg-transparent border-0" @onclick=DisplayBroadband><h2>BusinessBroadband</h2></button>
+        }
+        </div>
+</div>
+
+<div class="container my-3">
+    @if (displayWhat)
+    {
+        BusinessBroadband(__builder);
+    }
+    else
+    {
+        BusinessPhone(__builder);
+    }
+</div>
+
+
+
+
+@code {
+    private bool displayWhat = false;
+    private void DisplayBroadband(){ displayWhat = true; }
+    private void DisplayPhone(){ displayWhat = false; }
+    void BusinessBroadband(RenderTreeBuilder __builder)
+    {
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <a  href="https://cdn.xln.co.uk/media/2022/01/19/Fibre-Broadband-Quick-Start-Guide.pdf" target="_blank" class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Fibre Broadband - Quick Start Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a  href="https://cdn.xln.co.uk/media/2021/08/12/change-my-wi-fi-password.pdf" target="_blank" class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">How to change your wireless password</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a  href="https://cdn.xln.co.uk/media/2021/08/12/troubleshoot_adsl-router-setup.pdf" target="_blank" class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Troubleshooting your ADSL broadband (standard) connection</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a  href="https://cdn.xln.co.uk/media/2021/08/12/troubleshoot_fibre-super-router-setup.pdf" target="_blank" class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Troubleshooting your fibre super router connection</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a  href="https://cdn.xln.co.uk/media/2021/08/12/troubleshoot_fibre-router-setup.pdf" target="_blank" class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Troubleshooting your fibre broadband connection</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a  href="https://cdn.xln.co.uk/media/2021/08/12/help-guide_adsl-router-setup.pdf" target="_blank" class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">How to set up your broadband router</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div>
+        </div>
+    }
+    void BusinessPhone(RenderTreeBuilder __builder)
+    {
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2022/03/21/Cisco_Webex_Mobile_App_-_v3.pdf"  class="download-link">
+                <article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Cisco Webex Mobile App Setup Guide</h4><!---->
+                        <p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article>
+                </a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/11/30/CV_guide_Cordless.mp4"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Cloud Voice Guide - Cordless Phone</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/08/12/W60B-QSG-Handset-Set-Up-Guide.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Yealink W60B QSG Handset Setup Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/08/12/w53-qsg-handset-set-up-guide.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Yealink W53 QSG Handset Setup Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p>
+                        <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/08/12/T46U-QSG-Handset-Set-Up-Guide.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Yealink T46U QSG Handset Setup Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/08/12/Registering-your-Handset-Set-Up-Guide.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Registering your Handset Setup Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/08/12/Phonebook-Set-Up-Guide.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Phonebook Setup Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                       
+                        </div>
+                    </div><!----><!---->
+                </article> </a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/08/12/Hunt-Group-Set-Up-Guide.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Hunt Group Setup Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article> </a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/08/12/Voicemail-Set-Up-Guide.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Voicemail Setup Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/08/12/Call-Divert-Set-Up-Guide.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Call Divert Setup Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/08/12/Auto-Attendant-Set-Up-Guide.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Auto-attendant Setup Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/08/12/Additional-Features-Set-Up-Guide.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Additional Features Setup Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                       
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2022/03/03/Mobile-App-Set-Up-Guide.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Mobile App Setup Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/08/12/Desktop-App-Set-Up-Guide.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Desktop App Setup Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/08/12/Cloud-Voice-Quick-Set-Up-Guide.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Cloud Voice Quick Setup Guide</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div><div class="col-md-6 col-lg-4">
+                <a target="_blank" href="https://cdn.xln.co.uk/media/2021/08/12/cloudvoice-overview.pdf"  class="download-link"><article class="card card--download">
+                    <!----><!----><div class="card-body">
+                        <h4 class="card-title">Cloud Voice Overview</h4><!----><p class="card-text">
+                            <span class="pdf-icon"><img src="https://cdn.xln.co.uk/media/2021/07/29/pdf.svg" alt="pdf icon" width="32" height="32" class=""></span> Click to download.
+                        </p> <div class="card__btn-wrap">
+                        
+                                <span class="float-end oi oi-data-transfer-download"></span>
+                        
+                        </div>
+                    </div><!----><!---->
+                </article></a>
+            </div>
+        </div>
+    }
+}

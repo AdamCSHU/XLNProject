@@ -1,0 +1,55 @@
+﻿.radio-holder{
+    display: flex;
+    justify-content: center;
+}
+.header {
+    width:100%;
+    padding:15px 0px;
+}
+
+.centered-holder {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    height:75vh;
+}
+.main {
+    
+    width: 85vw;
+}
+    .main > div {
+        padding: 20px;
+    }
+    
+
+
+
+a{
+    text-decoration:none;
+    color:black;
+}
+.centered-content {
+    border: 1px solid rgb(128, 128, 128, 0.5);
+    border-radius: 5px;
+    /**
+    padding: 50px 40px;
+    /**
+        margin-top: -6rem;
+    /**/
+    width: 100%;
+}
+.faultservice{
+    background:lightgrey;
+    border:3px solid grey;
+    border-radius: 50px;
+    width:100%;
+    margin:1rem 0px;
+    padding:0.5rem;
+}
+
+.radio-holder .btn:first-of-type{
+    border-left:none!important;
+}
+.radio-holder .btn:last-of-type{
+    border-right:none!important;
+}

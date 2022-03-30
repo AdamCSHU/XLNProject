@@ -1,0 +1,247 @@
+﻿@page "/page3"
+@using Microsoft.AspNetCore.Components.Rendering
+@inject NavigationManager NavigationManager;
+@namespace XLN_mock.Model
+<PageTitle>@title</PageTitle>
+
+<div class="text-center bg-main pt-4 pb-2 mb-5 border-bottom border-5 border-dark">
+    <h2>Raising a fault against: @cli</h2>
+</div>
+
+<div class="container">
+    <EditForm Model="@form" OnValidSubmit=@ValidFormSubmitted>
+        <DataAnnotationsValidator />
+        <div class="form-group">
+            <label for="companyName">Company Name</label>
+            <InputText @bind-Value=form.CompanyName class="form-control" id="companyName" />
+        </div>
+        <div class="form-group">
+            <label for="name">Contact Name</label>
+            <InputText @bind-Value=form.ContactName class="form-control" id="name" />
+        </div>
+        <div class="form-group">
+            <label for="email">Contact Email</label>
+            <InputText type="email" @bind-Value=form.ContactEmail class="form-control" id="email" />
+        </div>
+        <div class="form-group">
+            <label for="phone">Contact Phone</label>
+            <InputText maxlength=11 @bind-Value=form.ContactPhone class="form-control" id="phone" />
+            <ValidationMessage For=@(() => form.ContactPhone) />
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile Phone</label>
+            <InputText maxlength=11 placeholder="07XXXXXXXXX" @bind-Value=form.MobilePhone class="form-control" id="mobile" palceholder="If contact phone is not the best way to reach you"/>
+
+        </div>
+        <div class="form-group">
+            <label for="engineer">Engineer Notes</label>
+            <InputTextArea @bind-Value=form.EngineerNotes class="form-control" id="engineer" placeholder="How can the engieer reach you, enter your building, a number to contact, etc..."></InputTextArea>
+            <ValidationMessage For=@(() => form.EngineerNotes) />
+        </div>
+
+
+        <h3>Incident Report</h3>
+
+        <div class="form-group">
+            <label for="affecting">What is the fault affecting? If both slect CLI.</label><br />
+            <InputRadioGroup @bind-Value=form.AffectingWhat class="form-check form-check-inline" id="affecting">
+
+                @foreach (var option in rdOptions)
+                {
+                    <span class="me-4"><InputRadio class="form-check-input " Value="option" /> @option </span>
+                }
+            </InputRadioGroup>
+            <ValidationMessage For=@(() => form.AffectingWhat) />
+        </div>
+
+        @if (form.AffectingWhat != null)
+        {
+            <div class="form-group">
+                <label for="faultType">Incident Type</label>
+                <InputSelect @bind-Value=form.IncidentType class="form-control" id="faultType" placeHolder="Select One">
+
+                    @if (form.AffectingWhat.Equals("CLI"))
+                    {
+                    <option value="" selected disabled>Select one</option>
+                    @foreach (var option in CLIfaults)
+                        {
+                        <option value=@option>@option</option>
+                        }
+                    }
+                    else
+                    {
+                    <option value="" selected disabled>Select one</option>
+                    @foreach (var option in BBfaults)
+                        {
+                        <option>@option</option>
+                        }
+                    }
+
+            </InputSelect>
+            <ValidationMessage For=@(() => form.IncidentType) />
+        </div>
+        }
+        @if(!form.IncidentType.Equals("0"))
+        {
+            <div class="form-group">
+                <label for="incidentDetails">Incident Details</label>
+                <InputText @bind-Value=form.IncidentDetails class="form-control" id="incidentDetails" maxlength=@maxInput/>
+                <ValidationMessage For=@(() => form.IncidentDetails) />
+                    <!-- @oninput="(EventArgs) => {Remaining(EventArgs.Value.ToString());} -->
+                <div class="text-muted">@charsLeft</div>
+            </div>
+             <div class="form-check mt-1 ">
+                <label for="intermittent">Intermittent?</label>
+                <InputCheckbox @bind-Value="form.IsIntermittent" class="form-check-input"/>
+                <ValidationMessage For=@(() => form.IsIntermittent) />
+            </div>
+            @if (form.IsIntermittent == true)
+            {
+                <div class="form-group">
+                    <label for="intermittentDetails">Provide details</label>
+                    <InputText @bind-Value="form.IntermittentDetails" class="form-control" id="intermittentDetails" placeholder="State the pattern or duration.."/>
+                    <ValidationMessage For=@(() => form.IntermittentDetails) />
+                </div>
+            }
+            <div class="form-group my-2">
+                <div class="d-flex flex-row gap-4">
+                    <button class="btn btn-primary" type="button" disabled=@testRan @onclick="MockDiagnostics">Run Diagnostics</button>
+                    <div class="pl-3">
+                        <label for="diagnosticsResults">Diagnostics Results:</label>
+                        <InputText @bind-Value="form.DiagnosticResults" readonly class="form-control-plaintext py-0" id="diagnosticsResults" />
+                    </div>
+                </div>
+                <ValidationMessage For=@(() => form.DiagnosticResults) />
+            </div>
+            <div name="warning_btn_drop">
+                <button class="btn btn-sm btn-warning" type="button" @onclick="collapse">Warning</button>
+                <div style="display:@warningHide" class="mb-0 border border-warning border-3 rounded-3 p-2 bg-light text-center">
+
+                    <strong><a class="fs-4 text-black" target="_blank" href="https://btbusiness.custhelp.com/app/answers/detail/a_id/45454/~/i-have-a-fault-on-my-phone-line.-how-do-i-test-my-equipment-or-wiring%3F">Have you run your basic tests?</a></strong>
+                    <p style="text-align:left!important;">
+                        It should be advised that customers should follow these checks prior to proceeding with the fault submission to confirm that they have checked their equipment and that if the fault is found to be on their own equipment that they may be subject to time related charges. Any engineer charges may be passed on if the fault is proven on customer's apparatus.
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-check mt-2 mb-3">
+                <label class="intermittent" for="warninTick">Have you read and understoon the warning?</label>
+                <InputCheckbox @bind-Value="form.AcceptsWarning" class="form-check-input" id="warninTick"/>
+                <ValidationMessage For=@(() => form.AcceptsWarning) />
+            </div>
+
+
+            <div class="form-group">
+                <label for="divertTick">Divert required?</label>
+                <InputCheckbox @bind-Value="form.DivertRequired" class="form-check-input" id="divertTick" />
+            </div>
+            @if (form.DivertRequired)
+            {
+                <div class="form-group">
+                    <label for="divertNum">Divert calls to?</label>
+                    <InputText @bind-Value="form.DivertPhone" maxlength=11 class="form-control" id="diverNum" />
+                    <ValidationMessage For=@(() => form.DivertPhone) />
+                </div>
+            }
+            
+        }
+        <!-- End If Indicent Type -->
+        
+
+        <!--<ValidationSummary></ValidationSummary>-->
+        <div style="height:86px;" class="mt-2"></div>
+        <div class="bg-light footer fixed-bottom d-grid gap-2 px-3 py-4">
+            <button type="submit" class="btn btn-primary" value="Save" disabled="@(!context.Validate())">Submit</button>
+        </div>
+
+    </EditForm>
+</div>
+
+
+@code {
+    private string title = "Report a Fault";
+    FaultForm form = new FaultForm();
+    void ValidFormSubmitted(EditContext editContext)
+    {
+        NavigationManager.NavigateTo($"/submit?comp={form.CompanyName}&name={form.ContactName}&email={form.ContactEmail}&phone={form.ContactPhone}&mobile={form.MobilePhone}&engineer={form.EngineerNotes}&affecting={form.AffectingWhat}&incident={form.IncidentType}&incidentDetails={form.IncidentDetails}&inter={form.IsIntermittent}&interDetails={form.IntermittentDetails}&diagnostics={form.DiagnosticResults}&accept={form.AcceptsWarning}");
+    }
+
+    /*FAKE DATABASE*/
+    protected override async Task OnInitializedAsync()
+    {
+        loadFromDB();
+    }
+    private void loadFromDB()
+    {
+        form.CompanyName = "Your Company";
+        form.ContactName = "Your Name";
+        form.ContactEmail = "email@gmail.com";
+        form.ContactPhone = "07345345456";
+    }
+    
+    private List<string> rdOptions = new List<string> { "CLI", "Broadband" };
+    private List<string> CLIfaults = new List<string>
+    {
+        "Bell not ringing",
+        "Continuous dial tone",
+        "Crossed lines",
+        "Cuts off",
+        "No dial tone",
+        "Noisy line",
+        "Damage"
+    };
+    private List<string> BBfaults = new List<string>
+    {
+        "Intermittent connection",
+        "Early life failure",
+        "Broadband fault",
+        "Landline fault",
+        "Firmware upgraded",
+        "No web pages loading"
+
+    };
+    /*Incident Details Chars Remaining*/
+    private int maxInput = 50;
+    private string charsLeft ="50";
+    private void Remaining()
+    {
+        charsLeft = ( maxInput - 0).ToString();
+    }
+
+    /*Warning Dropdown*/
+    string warningHide = "none";
+    bool displayFactor = false;
+    private void collapse()
+    {
+        displayFactor = !displayFactor;
+        warningHide = displayFactor ? "block" : "none";
+    }
+
+    /*Mock Diagnostics*/
+    bool testRan = false;
+    string result = "";
+    List<string> diagnosticOut = new List<string> { "CA – Customer apparatus", "LF – Line fault", "EX – Exchange fault", "DP – Distribution point", "OK – Line tests ok" };
+    private void MockDiagnostics()
+    {
+        testRan = true;
+
+        Random rnd = new Random();
+        result = diagnosticOut[rnd.Next(5)];
+        form.DiagnosticResults = result;
+
+    }
+
+    /*Querry String*/
+    string cli { get; set; }
+    protected override void OnInitialized()
+    {
+        GetCLI();
+    }
+
+    public void GetCLI()
+    {
+        var uri = new Uri(NavigationManager.Uri);
+        cli = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query).TryGetValue("cli", out var type) ? type.First() : "";
+    }
+
+}
