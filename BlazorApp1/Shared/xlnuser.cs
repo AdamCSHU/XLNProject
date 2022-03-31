@@ -18,7 +18,7 @@ namespace BlazorApp1.Shared
          
         public Fault? Fault { get; set; }
 
-        public int FaultId { get; set; }
+       // public int FaultId { get; set; }
 
         public string Address { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;

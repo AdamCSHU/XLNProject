@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,8 @@ namespace BlazorApp1.Shared
 {
     public class Fault
     {
-        public int Id { get; set; }
+        [Key]
+        public int FaultId { get; set; }
 
         public string Status { get; set; } = string.Empty;
         public string Notes { get; set; } = string.Empty;
