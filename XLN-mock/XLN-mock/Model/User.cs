@@ -37,9 +37,25 @@ namespace XLN_mock.Model
                 }
             }
         }
+        public void delete(FaultForm against)
+        {
+            if (Faults != null)
+            {
+                for (int x = 0; x < Faults.Count; x++)
+                {
+                    if (Faults[x]==(against))
+                    {
+                        Faults.RemoveAt(x);
+                    }
+                }
+            }
+        }
         [Required(ErrorMessage = "Account Number is Required")]
+        [RegularExpression("^[0-9]*$",
+         ErrorMessage = "Characters are not allowed.")]
         public string AccountNumber { get; set; }
         [Required(ErrorMessage = "Password is Required")]
+        
         public string Password { get; set; }
 
         public string CompanyName { get; set; }

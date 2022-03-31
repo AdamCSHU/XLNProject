@@ -36,6 +36,7 @@ html, body {
 }
 .bg-main {
     background-color: #00a4c4 !important;
+    color:white;
 }
 
 /* spinning wheel*/

@@ -46,14 +46,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/ValueInputText.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmFsdWVJbnB1dFRleHQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Shared/SurveyPrompt.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -77,10 +69,6 @@ build_metadata.AdditionalFiles.CssScope = b-4borvvmvci
 [C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Troubleshoot.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJvdWJsZXNob290LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-jxc1e3yfh2
-
-[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/ZOLDForm.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcWk9MREZvcm0ucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-g7dwvdvofq
 
 [C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
