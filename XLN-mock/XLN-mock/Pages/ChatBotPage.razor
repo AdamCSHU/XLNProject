@@ -1,11 +1,51 @@
 ﻿@page "/chatbot"
 
-<h3>ChatBot Page</h3>
 
-    <div>
-        <iframe src='https://webchat.botframework.com/embed/xlnfaq-bot?s=m9dvm9h3rmM.HsWsYRRK9pXH2bfe3ICuA68Y0KqTr0sFVQLsH48LjAQ'  style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
+<style>
+   
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.chatbot{
+  position: relative;
+  overflow: hidden;
+  max-width: 960px;
+  /*padding-top: 56.25%; /* this makes chatbot optimised for a 16:9 desktop/laptop view.*/
+  padding-top: 195%; /* this makes chatbot optimised for a 9:16/9:18 mobile view. For other aspect ratios or none 9:16 phone testing, this value may need changing.*/
+}
+
+.header {
+  padding: 15px;
+  text-align: center;
+  background: #009DC4;
+  color: white;
+  font-size: 15px;
+  font-family: 'Fira Sans', sans-serif;
+}
+h1{
+    text-align: center;
+}
+
+
+
+
+</style>
+
+<div class="header">
+  <h1>Support Chat</h1>
+</div>
+
+    <div class="chatbot">
+        <iframe class='responsive-iframe' src='https://webchat.botframework.com/embed/xlnfaq-bot?s=m9dvm9h3rmM.HsWsYRRK9pXH2bfe3ICuA68Y0KqTr0sFVQLsH48LjAQ'style='font-family: "Fira Sans", sans-serif; color:#66cade;'></iframe>
     </div>
-
 @code {
 
 }
