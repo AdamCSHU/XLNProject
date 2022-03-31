@@ -85,7 +85,7 @@
       "url": "sample-data\/weather.json"
     },
     {
-      "hash": "sha256-8hGc02RzOAmpq3PcIY6Iwacc1mWDjCl7\/\/K0jcPNafY=",
+      "hash": "sha256-uRekOHrANckr5JVgaEuTKPKwHGenD9vai2fQ65VLgyQ=",
       "url": "XLN-mock.styles.css"
     },
     {
@@ -881,11 +881,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-K6RPBYRy007OTg3HvbLwNbVlczTFiFTPx0ueTlaBUYU=",
+      "hash": "sha256-PI8IlqLb+oub00EEM0Mak85fxli6NuTrD9i\/Cb2fe64=",
       "url": "_framework\/XLN-mock.dll"
     },
     {
-      "hash": "sha256-zrtA1Op67n1NYjhPk54CCT3ss08dgHdSASzHJmNJifo=",
+      "hash": "sha256-scE0Ixlog6cCXsy34wyiAqBtzdcypZXqfqsl6rwg724=",
       "url": "_framework\/XLN-mock.pdb"
     },
     {
@@ -893,9 +893,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-pkD7bTYXBp\/LYJGCr5owREHRZzzqmAX\/mlybKXETVL8=",
+      "hash": "sha256-LYAZ7uUz0BEZ0HeXs5WZav7zK0y2cvjnml2j6pPrQ7Y=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "Cl6vQtDZ"
+  "version": "63nr9\/xl"
 };
