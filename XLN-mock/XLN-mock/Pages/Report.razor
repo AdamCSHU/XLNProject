@@ -1,6 +1,7 @@
 ﻿
 @page "/report"
 @inject NavigationManager NavigationManager;
+@namespace XLN_mock.Model
 
 
 <PageTitle>@title</PageTitle>
@@ -11,7 +12,20 @@
             <h3>You are about to report a fault!</h3>
         </div>
         <div>
-            <p>Before you report a fault, ensure that you have checked your equipment thoroughly. Engineering visits that prove faults to be with customer equipment or damage caused to the network may result in a charge.</p>
+            <p class="mb-0 ">Before you report a fault, ensure that you have checked your equipment thoroughly. Engineering visits that prove faults to be with customer equipment or damage caused to the network may result in a charge.</p>
+           
+            <div class="form-group mb-4">
+                <label for="against"></label>
+                <select @bind="reportAgainst" class="form-control" id="against">
+                <option value="" selected disabled>Please Select</option>
+                @foreach(var option in user.Products)
+                {
+                    <option value="@option[0]">@option[0]</option>
+                }
+                </select>
+            </div>
+            
+
             <div class="text-center">
                 <button class="text-white mx-3 btn bg-success" @onclick="OnClick">Continue</button>
                 <!--a href="/form/{CLI}" onclick="" class="mx-3 btn bg-success">Continue</a-->
@@ -24,29 +38,32 @@
 
 
 @code {
-    private string title = "Warning";
-    string isCLI { get; set; }
-    string cli { get; set; }
-    protected override void OnInitialized()
+    User user;
+    List<string[]> clis = new List<string[]>
     {
-        GetisCLI();
-        GetCLI();
+        new string[] {"01142567567", "false"},
+        new string[] {"01142567890","true" },
+        new string[] {"01142567910","true" },
+        new string[] {"01142567678","false" }
+    };
+
+    string reportAgainst;
+    /*FAKE DATABASE*/
+    protected override async Task OnInitializedAsync()
+    {
+        loadFromDB();
     }
-    public void GetisCLI()
+    private void loadFromDB()
     {
-        var uri = new Uri(NavigationManager.Uri);
-        isCLI = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query).TryGetValue("iscli", out var type) ? type.First() : "";
-    }
-    public void GetCLI()
-    {
-        var uri = new Uri(NavigationManager.Uri);
-        cli = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(uri.Query).TryGetValue("cli", out var type) ? type.First() : "";
-    }
-    
-    private void OnClick()
-    {
-        NavigationManager.NavigateTo($"form");
-        //NavigationManager.NavigateTo($"form/?cli={cli}");
+        user = new User(4857597,"pass", "SmallBizAnon", "Jennifer", "email@gmail.com", "0734534545");
+        user.addProduct(clis);
     }
 
+    private string title = "Warning";
+
+    private void OnClick()
+    {
+        //NavigationManager.NavigateTo($"form");
+        NavigationManager.NavigateTo($"form/?cli={reportAgainst}");
+    }
 }

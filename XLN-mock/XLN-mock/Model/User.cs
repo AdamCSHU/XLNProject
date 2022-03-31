@@ -6,17 +6,18 @@ namespace XLN_mock.Model
     public class User
     {
         public User() { }
-        public User(int ID, string cName, string name, string email, string phone)
+        public User(int ID, string pass,string cName, string name, string email, string phone)
         {
-            AccountNumber=ID;
+            AccountNumber=ID.ToString();
+            Password = pass;
             CompanyName=cName;
             ContactName=name;
             ContactEmail=email;
             ContactPhone=phone;
         }
-        public void addCLIs(List<string> clis)
+        public void addProduct(List<string[]> product)
         {
-            CLIs = clis;
+            Products = product;
         }
         public void addFault(FaultForm form)
         {
@@ -36,7 +37,26 @@ namespace XLN_mock.Model
                 }
             }
         }
-        public int AccountNumber { get; set; }
+        public void delete(FaultForm against)
+        {
+            if (Faults != null)
+            {
+                for (int x = 0; x < Faults.Count; x++)
+                {
+                    if (Faults[x]==(against))
+                    {
+                        Faults.RemoveAt(x);
+                    }
+                }
+            }
+        }
+        [Required(ErrorMessage = "Account Number is Required")]
+        [RegularExpression("^[0-9]*$",
+         ErrorMessage = "Characters are not allowed.")]
+        public string AccountNumber { get; set; }
+        [Required(ErrorMessage = "Password is Required")]
+        
+        public string Password { get; set; }
 
         public string CompanyName { get; set; }
 
@@ -46,7 +66,8 @@ namespace XLN_mock.Model
 
         public string ContactPhone { get; set; }
 
-        public List<string> CLIs { get; set; }
+        public List<string[]> Products { get; set; }
+
 
         public List<FaultForm> Faults { get; set; }
     }

@@ -36,6 +36,7 @@ html, body {
 }
 .bg-main {
     background-color: #00a4c4 !important;
+    color:white;
 }
 
 /* spinning wheel*/
@@ -43,7 +44,7 @@ html, body {
 .loader {
     position: fixed;
     top: 50%;
-    margin-left:45%;
+    margin-left: 48vw;/**calc(~"50vh - 112px");/**/
     border: 12px solid lightgrey;
     border-radius: 50%;
     border-top: 12px solid #3498db;

@@ -2494,4 +2494,4 @@ C:\Users\labstudent\Desktop\XLN-mock\XLN-mock\obj\Debug\net6.0\XLN-mock.dll
 C:\Users\labstudent\Desktop\XLN-mock\XLN-mock\obj\Debug\net6.0\refint\XLN-mock.dll
 C:\Users\labstudent\Desktop\XLN-mock\XLN-mock\obj\Debug\net6.0\XLN-mock.pdb
 C:\Users\labstudent\Desktop\XLN-mock\XLN-mock\obj\Debug\net6.0\ref\XLN-mock.dll
-C:\Users\labstudent\Desktop\XLN-mock\XLN-mock\obj\Debug\net6.0\scopedcss\Pages\Form - Copy.razor.rz.scp.css
+C:\Users\labstudent\Desktop\XLN-mock\XLN-mock\obj\Debug\net6.0\scopedcss\Pages\ZOLDForm.razor.rz.scp.css

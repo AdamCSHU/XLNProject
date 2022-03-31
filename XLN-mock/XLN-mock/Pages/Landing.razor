@@ -4,36 +4,44 @@
 
 <PageTitle>Log In</PageTitle>
 
+<style>
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+</style>
 
 
 <span class="centered-holder">
- 
-        <div class="login">
-            <div class="img-contianer mb-5">
-               <img src="images/logo.svg" asp-append-version="true" alt="XLN Logo" class="logo" /> 
-            </div>
-            <EditForm Model=@NewUser OnSubmit=@FormSubmitted>
-                <DataAnnotationsValidator />
-              <div class="form-group mb-4">
-                <!-- label for="accNum">Account Info</label -->
-                <input type="text" class="form-control" id="accNum" aria-describedby="emailHelp" placeholder="Account Number">
-                <!-- small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</!--small> -->
-              </div>
-              <div class="form-group mb-4">
-                <!-- <label for="password">Password</label -->
-                <input type="password" class="form-control" id="password" placeholder="Password">
-              </div>
-              <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
-            </EditForm>
-    
+    <div class="login">
+        <div class="img-contianer mb-5">
+            <img src="images/logo.svg" asp-append-version="true" alt="XLN Logo" class="logo" /> 
         </div>
+        <EditForm Model=@user OnValidSubmit=@FormSubmitted>
+            <DataAnnotationsValidator />
+            <div class="form-group mb-4">
+                <InputText @bind-Value="user.AccountNumber" class="form-control" id="accNum" placeholder="Account Number" />
+                <ValidationMessage For=@(() => user.AccountNumber) />
+            </div>
+            <div class="form-group mb-4">
+                <InputText @bind-Value="user.Password" type="password" class="form-control" id="password" placeholder="Password" />
+                <ValidationMessage For=@(() => user.Password) />
+            </div>
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </EditForm>
+    </div>
 </span>
 
 @code{
-    User NewUser = new User();
+    User user = new User();
 
     private void FormSubmitted(EditContext editContext) => NavigationManager.NavigateTo("/profile");
 

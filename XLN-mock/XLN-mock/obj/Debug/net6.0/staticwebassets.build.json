@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zztQcGXkAIdun8Mihbd71Bp5jUEvTRxDCNXuVdKdRAw=",
+  "Hash": "jlG/GN5ABS0pQfGD0kuiFoAO0NFVxXtW2If6nTwcJ0k=",
   "Source": "XLN-mock",
   "BasePath": "/",
   "Mode": "Root",
@@ -6985,23 +6985,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\app.css"
-    },
-    {
-      "Identity": "C:\\Users\\labstudent\\Desktop\\XLN-mock\\XLN-mock\\wwwroot\\css\\app.scss",
-      "SourceId": "XLN-mock",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\labstudent\\Desktop\\XLN-mock\\XLN-mock\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "css/app.scss",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\app.scss"
     },
     {
       "Identity": "C:\\Users\\labstudent\\Desktop\\XLN-mock\\XLN-mock\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
