@@ -44,27 +44,34 @@
 
                 
 @code {
-   private string UserName { get; set; } = string.Empty ;
 
-   private string Password { get; set; } = string.Empty;
-
-     xlnuser user = new xlnuser();
-
-     async void submit()
-    {
-       
-   if (UserName == "1" && Password == "1234")
-        {  
-            
-         NavigationManager.NavigateTo($"user/{1}");
-
-        }
-    }
-      protected override async Task OnInitializedAsync()
+     protected override async Task OnInitializedAsync()
     {
 
     await UserService.GetUsers();
     }
-  
+
+    public string UserName { get; set; }
+
+ 
+    private string Password { get; set; } = string.Empty;
+
+    xlnuser user = new xlnuser();
+
+    public async Task submit()
+    {
+
+        foreach ( var un in UserService.Users)
+        {
+            if (un.Id == Convert.ToInt32(UserName) && un.Password == Password )
+            {
+                
+               NavigationManager.NavigateTo($"user/{un.Id}");
+            }
+
+        }
+    }  
+
     
+      
 }
