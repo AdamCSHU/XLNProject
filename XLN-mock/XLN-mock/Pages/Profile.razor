@@ -4,12 +4,6 @@
 @namespace XLN_mock.Model
 <PageTitle>@title</PageTitle>
 
-
-
-
-
-
-
 <div class="header text-center bg-main">
     <div class="bg-light p-2">
         Need to call Customer Service? <a href=tel class="text-decoration-none">0344 880 7777</a>
@@ -18,18 +12,21 @@
         <div>
             <img height="25px" src="../images/user_icon.png" /> @user.ContactName (@user.AccountNumber) - <strong><a href="/logout" class="text-decoration-none link-dark">Logout</a></strong>
         </div>
-        <h1 class="mt-2 text-white">@title</h1>
+        <div >
+            <button @onclick=Toggle class="border-0 bg-transparent fs-1 mt-2 text-white">@title <span style="display:@carrotUp" class="fs-5 pl-2 oi oi-caret-bottom text-white"></span><span style="display:@carrotDown" class="fs-5 pl-2 oi oi-caret-top text-white"></span></button> 
+            <div>
+                <button @onclick=@(e=>NavTo("support")) class="text-white fs-2 bg-transparent border-0">Support</button>
+            </div>
+        </div>
+        
     </div>
 </div>
-<div class="container px-4 pb-4 mb-3 bg-main">
-    <div class="row">
-        <div class="col">Company Name: @user.CompanyName</div>
-        <div class="col">Contact Name: @user.ContactName</div>
-    </div>
-    <div class="row">
-        <div class="col">Contact Phone: @user.ContactPhone</div>
-        <div class="col">Contact Email: @user.ContactEmail</div>
-    </div>
+<div style="display:@disp" class="container px-4 pb-4 mb-3 bg-main">
+    <div class="row">Account Number: @user.AccountNumber</div>
+    <div class="row">Company Name: @user.CompanyName</div>
+    <div class="row">Contact Name: @user.ContactName</div>
+    <div class="row">Contact Phone: @user.ContactPhone</div>
+    <div class="row">Contact Email: @user.ContactEmail</div>
 </div>
 
 
@@ -39,35 +36,33 @@
 <!-- CLIS AND FAULT LISTS -->
 
 <div>
-    <div class="d-flex flex-row ps-3 align-items-center">
+    <div class="mt-2 d-flex flex-row ps-3 align-items-center">
         <div class="me-auto">
             <h2>Phone Lines</h2>
         </div>
-        <div class="flex-shrink-1"><button @onclick="@report" class="m-2 btn btn-sm bg-main">Report Fault</button></div>
+        <div class="flex-shrink-1"><button @onclick="@(e=>NavTo("report"))" class="m-2 btn btn-sm bg-main">Report Fault</button></div>
     </div>
     <div class="d-flex flex-column">
         @{PhoneLines(__builder);}
     </div>
-    <div class="d-flex flex-row ps-3 align-items-center">
+    <div class="mt-2 d-flex flex-row ps-3 align-items-center">
         <div class="me-auto">
             <h2>Line and Broadbands</h2>
         </div>
-        <div class="flex-shrink-1"><button @onclick="@report" class="m-2 btn btn-sm bg-main">Report Fault</button></div>
+        <div class="flex-shrink-1"><button @onclick="@(e=>NavTo("report"))" class="m-2 btn btn-sm bg-main">Report Fault</button></div>
     </div>
     <div class="d-flex flex-column">
         @{BroadLines(__builder);}
     </div>
 </div>
+
+
+<!--FAULTS-->
 <div>
-    <div class="d-flex flex-row ps-3 mt-2 align-items-center">
-        <div class="me-auto">
-            <h2>Faults</h2>
-        </div>
-        <div class="flex-shrink-1"><button @onclick="@editFault" class="m-2 btn btn-sm text-white" style="background-color:#ff6363;">Cancel/Close Faults</button></div>
-    </div>
-    <div class="d-flex flex-column">
+    
+    
         @{FaultList(__builder);}
-    </div>
+    
 </div>
 
 
@@ -91,20 +86,31 @@
     }
     private void loadFromDB()
     {
-        user = new User(4857597, "SmallBizAnon", "Jennifer", "email@gmail.com", "0734534545");
+        user = new User(4857597, "password","SmallBizAnon", "Jennifer", "email@gmail.com", "0734534545");
         user.addProduct(clis);
         fault1 = new FaultForm(user.Products[0][0],"Pending");
         Console.WriteLine(user.Products[0][0]);
         user.addFault(fault1);
     }
 
-    private void logout()
+    private void NavTo(string page)
     {
-        NavigationManager.NavigateTo($"/logout");
+        NavigationManager.NavigateTo($"/"+page);
     }
-
     
 
+    string disp = "none";
+    string carrotUp = "inline-block";
+    string carrotDown = "none";
+    bool display = false;
+    private void Toggle()
+    {
+        display = !display;
+        disp = display ? "block" : "none";
+        carrotDown = display ? "none" : "inline-block";
+        carrotUp = display ? "inline-block" : "none";
+
+    }
 
     private void report()
     {
@@ -143,7 +149,7 @@
                 <div class="border d-flex flex-row bg-light align-items-center">
                     <div class="p-1 me-auto">@user.Products[x][0]</div>
                 <div class="flex-shrink-1"><a href="/troubleshoot" class="m-2 btn btn-sm bg-danger">Troubleshoot</a></div>
-            </div>
+                </div>
             }
         }
     }
@@ -155,16 +161,37 @@
     }
     void FaultList(RenderTreeBuilder __builder)
     {
-        for(int x=0; x< user.Faults.Count; x++)
+        if (user.Faults.Count != 0)
         {
-            <div class="border d-flex flex-row bg-light align-items-center">
-                <div class="p-1 me-auto">@user.Faults[x].FaultAgainst</div>
-                <div class="flex-shrink-1"><button class="m-2 btn btn-sm bg-warning">@user.Faults[x].Status</button></div>
-                <div hidden=@(!editing)><button class="border-0 bg-transparent" @onclick=@(e => delete(user.Faults[x].FaultAgainst))><i class="oi oi-delete"/></button></div>
+            <div class="d-flex flex-row ps-3 mt-2 align-items-center">
+                <div class="me-auto">
+                    <h2>Fault History</h2>
+                </div>
+                <div class="flex-shrink-1"><button @onclick="@editFault" class="m-2 btn btn-sm text-white" style="background-color:#ff6363;">Cancel/Close Faults</button></div>
             </div>
-            Console.WriteLine(x);
+            for (int x = 0; x < user.Faults.Count; x++)
+            {
+                <div class="d-flex flex-column">
+                    <div class="border d-flex flex-row bg-light align-items-center">
+                        <div class="p-1 me-auto">@user.Faults[x].FaultAgainst</div>
+                        <div class="flex-shrink-1"><button class="m-2 btn btn-sm bg-warning">@user.Faults[x].Status</button></div>
+                        <div hidden=@(!editing)><button class="border-0 bg-transparent" @onclick=@(e => delete(user.Faults[x].FaultAgainst))><i class="oi oi-delete"/></button></div>
+                    </div>
+                </div>
+                Console.WriteLine(x);
+            }
         }
-        
+        else
+        {
+            
+            <div class="d-flex flex-row ps-3 mt-2 align-items-center">
+                <div class="me-auto">
+                    <h2>No History to Display</h2>
+                </div>
+                
+            </div>
+        }
+
     }
     private void delete(string against)
     {

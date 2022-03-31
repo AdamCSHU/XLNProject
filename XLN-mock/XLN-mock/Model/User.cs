@@ -6,9 +6,10 @@ namespace XLN_mock.Model
     public class User
     {
         public User() { }
-        public User(int ID, string cName, string name, string email, string phone)
+        public User(int ID, string pass,string cName, string name, string email, string phone)
         {
-            AccountNumber=ID;
+            AccountNumber=ID.ToString();
+            Password = pass;
             CompanyName=cName;
             ContactName=name;
             ContactEmail=email;
@@ -36,7 +37,10 @@ namespace XLN_mock.Model
                 }
             }
         }
-        public int AccountNumber { get; set; }
+        [Required(ErrorMessage = "Account Number is Required")]
+        public string AccountNumber { get; set; }
+        [Required(ErrorMessage = "Password is Required")]
+        public string Password { get; set; }
 
         public string CompanyName { get; set; }
 

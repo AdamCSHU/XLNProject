@@ -1,12 +1,8 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-U2\/PpGzd\/3IXYb8pt+HF92IZfr+MwMRpuR5LA3FJGJg=",
+      "hash": "sha256-nUL1Mt4qiMgRZGRO7oIWhcBIfQFIS3XRoeyti2CPgyo=",
       "url": "css\/app.css"
-    },
-    {
-      "hash": "sha256-wOo4G8X\/vj3z0F6ueCW9pB+ruPufzpFNeOf1QpGk2dM=",
-      "url": "css\/app.scss"
     },
     {
       "hash": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
@@ -885,11 +881,11 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-EnXdgAKadQBl9E\/4IFqEOWv6Eo7SSsntvtrDZMlrsfg=",
+      "hash": "sha256-Y8EUcL78w2AofPEBWenn+X0Z63koW\/A4SZx\/4lnzBuc=",
       "url": "_framework\/XLN-mock.dll"
     },
     {
-      "hash": "sha256-lMfXbNNkD\/SPrkhvOQVRbFyHoBM5xNwoBbh7dsTqiGw=",
+      "hash": "sha256-QC\/V97\/YKmSJijXKC8Io0+Mh5kmhaWN6dRkBv9spb94=",
       "url": "_framework\/XLN-mock.pdb"
     },
     {
@@ -897,9 +893,9 @@
       "url": "_framework\/blazor.webassembly.js"
     },
     {
-      "hash": "sha256-ymtyTZxivtX2KG2O\/lNfHo4L8Ly4uINznrp6JHxg658=",
+      "hash": "sha256-Mji0xMgfz1SU\/926mbuSzCu20N0As\/t321DPMAjqcj8=",
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "jAwo5Yk8"
+  "version": "hbLhW5aP"
 };
