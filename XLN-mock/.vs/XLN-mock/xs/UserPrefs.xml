@@ -8,9 +8,7 @@
         <State name="__root__">
           <Node name="XLN-mock" expanded="True">
             <Node name="XLN-mock" expanded="True">
-              <Node name="Pages" expanded="True">
-                <Node name="Landing.razor" selected="True" />
-              </Node>
+              <Node name="Pages" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -20,11 +18,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.XLN-mock PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.XLN-mock PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
