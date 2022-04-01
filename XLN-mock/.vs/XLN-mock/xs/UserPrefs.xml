@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{B9183314-CFDF-4932-B227-0196A5A1D185}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="XLN-mock/Pages/Landing.razor">
+    <Files>
+      <File FileName="XLN-mock/Pages/Landing.razor" Line="4" Column="7" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="XLN-mock" expanded="True">
+            <Node name="XLN-mock" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Landing.razor" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.XLN-mock PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

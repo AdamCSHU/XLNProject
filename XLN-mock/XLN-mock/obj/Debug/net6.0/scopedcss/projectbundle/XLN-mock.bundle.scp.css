@@ -1,19 +1,19 @@
 /* /Pages/Form.razor.rz.scp.css */
 /* /Pages/Landing.razor.rz.scp.css */
-.login[b-sjqrstyqns]{
+.login[b-2dx9zaxthq]{
     border: 1px solid rgb(128, 128, 128, 0.5);
     border-radius: 5px;
     padding:50px 40px;
-    margin-top: -25px;
+    margin-top: 25px;
     width:400px;
 }
-.logo[b-sjqrstyqns]{
+.logo[b-2dx9zaxthq]{
     width:250px;
 }
-.img-contianer[b-sjqrstyqns]{
+.img-contianer[b-2dx9zaxthq]{
     text-align:center;
 }
-.centered-holder[b-sjqrstyqns] {
+.centered-holder[b-2dx9zaxthq] {
     display: flex;
     justify-content: center;
     align-items: center;

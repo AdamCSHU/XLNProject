@@ -2,7 +2,13 @@
 @using Microsoft.AspNetCore.Components.Rendering
 @inject NavigationManager NavigationManager;
 @namespace XLN_mock.Model
-<PageTitle>@title</PageTitle>
+
+<head>
+   <title>@title</title> 
+   <link rel="stylesheet" type="text/css" href="styles/app.css">
+<link rel="stylesheet" media="only screen and (min-width:720px)" href="styles/desktop.css">
+</head>
+
 <meta http-equiv="refresh" content="2; URL=profile">
 
 <h2 style="position: fixed;top: 45%; left:33%;">Fault Processing</h2>
