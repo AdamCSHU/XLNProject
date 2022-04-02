@@ -11,69 +11,69 @@ build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = XLN-mock
 build_property.RootNamespace = XLN-mock
-build_property.ProjectDir = /Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/
+build_property.ProjectDir = C:\Users\labstudent\Desktop\XLN-mock\XLN-mock\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock
+build_property.MSBuildProjectDirectory = C:\Users\labstudent\Desktop\XLN-mock\XLN-mock
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/App.razor]
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/Pages/Chatbot.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvQ2hhdGJvdC5yYXpvcg==
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Chatbot.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhdGJvdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/Pages/Index.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXgucmF6b3I=
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/Pages/Login.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9naW4ucmF6b3I=
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/Pages/Logout.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTG9nb3V0LnJhem9y
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Logout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/Pages/Submit.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU3VibWl0LnJhem9y
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Submit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VibWl0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/Pages/Test.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVGVzdC5yYXpvcg==
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Test.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/_Imports.razor]
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/Pages/Form.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvRm9ybS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-6nxnjboigg
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Form.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-70cp7kig2n
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/Pages/Landing.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvTGFuZGluZy5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-2dx9zaxthq
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Landing.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGFuZGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-sjqrstyqns
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/Pages/Profile.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJvZmlsZS5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = b-fym69z4u6i
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Profile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-exeo4sfcif
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/Pages/Report.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUmVwb3J0LnJhem9y
-build_metadata.AdditionalFiles.CssScope = b-5u1gyveol1
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Report.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVwb3J0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-4borvvmvci
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/Pages/Troubleshoot.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvVHJvdWJsZXNob290LnJhem9y
-build_metadata.AdditionalFiles.CssScope = b-040rpxbp1l
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Pages/Troubleshoot.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJvdWJsZXNob290LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-jxc1e3yfh2
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/Shared/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-rbp37z1tel
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-76nk3my2vn
 
-[/Users/chrisghosal/Projects/XLNProject-1/XLN-mock/XLN-mock/Shared/NavMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL05hdk1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-76o7bop9y1
+[C:/Users/labstudent/Desktop/XLN-mock/XLN-mock/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-w51jg79pxi
